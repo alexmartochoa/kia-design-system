@@ -1,4 +1,4 @@
-// GENERADO por scripts/build-tokens.mjs desde los kia-*-tokens.md. No editar a mano.
+// GENERADO por scripts/build-tokens.mjs desde foundations/kia-*-tokens.md. No editar a mano.
 import type { TextStyle } from 'react-native';
 
 /** Primitivos: rampas, alpha y static. Clave = nombre de Figma (p. ej. "forest/600"). */

@@ -1,4 +1,4 @@
-// Lee los kia-*-tokens.md de la raíz y genera:
+// Lee foundations/kia-*-tokens.md y genera:
 //   src/tokens/tokens.data.json  -> datos crudos (los usan las páginas de docs)
 //   src/tokens/tokens.ts    -> objetos tipados para React Native
 // Los .md son la fuente de verdad: no edites los archivos generados.
@@ -18,7 +18,7 @@ const num = (s) => parseFloat(s.replace('−', '-').replace(',', '.').replace('+
 // ---------- Color ----------
 const STEPS = ['25', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950', '975'];
 const color = { ramps: [], alpha: [], static: [], semantic: [] };
-for (const c of rows(read('kia-color-tokens.md'))) {
+for (const c of rows(read('foundations/kia-color-tokens.md'))) {
   const name = unq(c[0]);
   if (c.length === 15 && /^[a-z]+$/.test(name) && c.slice(2).every((h) => HEX.test(h))) {
     color.ramps.push({ name, role: c[1], steps: Object.fromEntries(STEPS.map((s, i) => [s, c[i + 2]])) });
@@ -42,7 +42,7 @@ for (const c of rows(read('kia-color-tokens.md'))) {
 
 // ---------- Spacing ----------
 const spacing = { scale: [], roles: {} };
-for (const c of rows(read('kia-spacing-tokens.md'))) {
+for (const c of rows(read('foundations/kia-spacing-tokens.md'))) {
   const name = unq(c[0]);
   let m;
   if ((m = name.match(/^space\/scale\/(\d+)$/)) && /px$/.test(c[1])) {
@@ -56,7 +56,7 @@ for (const c of rows(read('kia-spacing-tokens.md'))) {
 // ---------- Typography ----------
 const WEIGHT = { Light: '300', Regular: '400', Bold: '600' };
 const typo = { family: {}, weight: WEIGHT, size: {}, lineHeight: {}, letterSpacing: {}, styles: [] };
-for (const c of rows(read('kia-typography-tokens.md'))) {
+for (const c of rows(read('foundations/kia-typography-tokens.md'))) {
   const name = unq(c[0]);
   if (/^font\/family\//.test(name)) typo.family[name.split('/')[2]] = c[3];
   else if (/^font\/size\//.test(name)) typo.size[name.replace('font/size/', '')] = +c[2];
@@ -119,7 +119,7 @@ const styles = typo.styles.map((s) => [
   },
 ]);
 
-const ts = `// GENERADO por scripts/build-tokens.mjs desde los kia-*-tokens.md. No editar a mano.
+const ts = `// GENERADO por scripts/build-tokens.mjs desde foundations/kia-*-tokens.md. No editar a mano.
 import type { TextStyle } from 'react-native';
 
 /** Primitivos: rampas, alpha y static. Clave = nombre de Figma (p. ej. "forest/600"). */

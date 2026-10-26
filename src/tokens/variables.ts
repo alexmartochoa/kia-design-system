@@ -1,4 +1,4 @@
-// GENERADO por scripts/build-variables.mjs desde kia-foundations-variables.json. No editar a mano.
+// GENERADO por scripts/build-variables.mjs desde foundations/kia-foundations-variables.json. No editar a mano.
 // Uso: variables.radius['action/ios'].regular · variables.motion['duration/medium'].Default
 // Motion: duraciones en ms; easing como string cubic-bezier (en RN usar Easing.bezier).
 export const variables = {
