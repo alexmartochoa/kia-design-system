@@ -1,0 +1,60 @@
+import { Meta, Canvas, Controls, Story } from '@storybook/addon-docs/blocks';
+import * as IconStories from './Icon.stories';
+
+<Meta of={IconStories} />
+
+# Icon
+
+Contenedor por el que pasa todo icono del sistema. Fija el tamaño desde una sola variante bindeada a `size/icon/*`, y el glifo entra por la propiedad `icon`. Ningún componente de Core instancia un icono directo: todos instancian este. Documento completo en `components/kia-icon-component.md`.
+
+<Canvas of={IconStories.Default} />
+<Controls of={IconStories.Default} />
+
+## Matriz de variantes
+
+El único eje es `size`. El tamaño lo decide el token y no la instancia.
+
+<Canvas of={IconStories.Sizes} />
+
+| size | Token | px | Cuándo |
+|---|---|---|---|
+| xl | size/icon/xl | 40 | Ilustrativo, no funcional: cabecera de modal o pantalla de resultado. |
+| lg | size/icon/lg | 32 | Iconos de estado en el centro de un bloque vacío (empty state, Image en error). |
+| md | size/icon/md | 24 | Iconos que se leen solos, sin texto al lado (chevron de Select lg, Snackbar, trailing de ListItem). |
+| sm | size/icon/sm | 16 | Por defecto del sistema, el más usado. Dentro de controles: Button, LinkButton, TextField, Select, Tag, Tab. |
+| xs | size/icon/xs | 12 | Acompaña texto chico: check de Checkbox y ChoiceBox, MenuItem. |
+| 2xs | size/icon/2xs | 8 | Solo el punto del Radio en size=sm. Es una marca, no un icono. |
+
+Si dudas entre dos, `sm` resuelve el 80% de los casos.
+
+## Color
+
+`color` solo acepta tokens semantic del tema; por defecto `icon/default`. Un hex suelto rompe los modos dark y light.
+
+<Canvas of={IconStories.Colors} />
+
+## Accesibilidad
+
+Sin `label` el icono es decorativo (`aria-hidden`). Con `label` se anuncia y debe decir la acción o el dato, no el dibujo: «Cerrar», no «equis». El área tocable (48 de `size/target/min`) la pone el control que lo aloja, no el Icon.
+
+<Canvas of={IconStories.WithLabel} />
+
+## Props
+
+| Prop | Tipo | Default | Property de Figma |
+|---|---|---|---|
+| name | IconName | — | icon (INSTANCE_SWAP) |
+| size | '2xs' · 'xs' · 'sm' · 'md' · 'lg' · 'xl' | 'md' | size (VARIANT) |
+| color | string (token) | icon/default | ninguna (divergencia) |
+| label | string | — | ninguna (divergencia) |
+
+## Antes de usarlo
+
+- El tamaño no se toca a mano: se cambia con `size`, nunca redimensionando.
+- Un tamaño por fila: los iconos de una misma fila comparten `size`.
+- No es Icon container ni Avatar: el glifo del avatar escala con `component/avatar/size/glyph/*`.
+- El Icon no tiene estados: hover y pressed los resuelve el control que lo aloja.
+
+## Pendiente
+
+El catálogo completo de glifos vive en la página `_Iconos` de la librería KIA, que no es accesible desde «KIA Core Componentes». Hoy solo está el placeholder `image-01`.
