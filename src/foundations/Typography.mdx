@@ -1,0 +1,14 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { TypeScale } from './docs';
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+Una sola familia, **Kia Signature** (Light, Regular, Bold), e **IBM Plex Mono** para código. Jerarquía por tamaño, peso y color, en ese orden. Criterio completo en `kia-typography-tokens.md`.
+
+En RN: `const { text } = useTheme(); <Text style={text['body/md/default']} />`.
+
+> Kia Signature no está cargada en Storybook, así que los ejemplos usan la fuente del sistema. Cámbiala por los archivos reales con `@font-face` en `.storybook/preview-head.html`.
+
+<TypeScale />

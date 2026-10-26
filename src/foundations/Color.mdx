@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { ColorRamps, AlphaTable, SemanticTable, semanticGroups } from './docs';
+
+<Meta title="Foundations/Color" />
+
+# Color
+
+Tres capas: **Primitives** (valores crudos) → **Brand** → **Semantic** (lo que consume la pantalla). El color comunica estado o jerarquía, nunca decora. Criterio completo en `kia-color-tokens.md`.
+
+## Primitivos · rampas
+
+<ColorRamps />
+
+## Alpha y static
+
+<AlphaTable />
+
+## Semánticos
+
+En RN: `const { color } = useTheme(); color['surface/base']`.
+
+{semanticGroups.map((g) => (
+  <div key={g}>
+    <h3 style={{ textTransform: 'capitalize' }}>{g}</h3>
+    <SemanticTable group={g} />
+  </div>
+))}

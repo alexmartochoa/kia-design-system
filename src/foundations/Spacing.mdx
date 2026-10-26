@@ -1,0 +1,30 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { SpaceScale, SpaceRoles } from './docs';
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing
+
+Escala en múltiplos de 4 y cuatro roles: **inset** (relleno), **stack** (vertical), **inline** (horizontal) y **gutter** (columnas). El rol se mantiene; el valor se adapta a la densidad (compact / regular / expanded). Criterio completo en `kia-spacing-tokens.md`.
+
+En RN: `const { space } = useTheme(); space['inset/md']`.
+
+## Escala base
+
+<SpaceScale />
+
+## Inset
+
+<SpaceRoles role="inset" />
+
+## Stack
+
+<SpaceRoles role="stack" />
+
+## Inline
+
+<SpaceRoles role="inline" />
+
+## Gutter
+
+<SpaceRoles role="gutter" />

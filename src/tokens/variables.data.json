@@ -1,0 +1,1975 @@
+[
+  {
+    "collection": "border-primitives",
+    "name": "border/scale/lg",
+    "type": "dimension",
+    "description": "3 px · Solo alto contraste.",
+    "values": {
+      "Default": 3
+    }
+  },
+  {
+    "collection": "border-primitives",
+    "name": "border/scale/md",
+    "type": "dimension",
+    "description": "2 px · Presencia: foco, selección, Checkbox y Radio.",
+    "values": {
+      "Default": 2
+    }
+  },
+  {
+    "collection": "border-primitives",
+    "name": "border/scale/none",
+    "type": "dimension",
+    "description": "0 px · Sin borde.",
+    "values": {
+      "Default": 0
+    }
+  },
+  {
+    "collection": "border-primitives",
+    "name": "border/scale/sm",
+    "type": "dimension",
+    "description": "1 px · El borde de casi todo.",
+    "values": {
+      "Default": 1
+    }
+  },
+  {
+    "collection": "border-primitives",
+    "name": "border/scale/xs",
+    "type": "dimension",
+    "description": "0.5 px · Línea de pelo. Nunca para estado o foco.",
+    "values": {
+      "Default": 0.5
+    }
+  },
+  {
+    "collection": "layers",
+    "name": "layer/modal",
+    "type": "dimension",
+    "description": "Diálogos, alertas y bottom sheets.",
+    "values": {
+      "Default": 1300
+    }
+  },
+  {
+    "collection": "layers",
+    "name": "layer/popover",
+    "type": "dimension",
+    "description": "Lo que se ancla a un control: menús, selects, autocompletar, Datepicker.",
+    "values": {
+      "Default": 1100
+    }
+  },
+  {
+    "collection": "layers",
+    "name": "layer/scrim",
+    "type": "dimension",
+    "description": "Fondo oscuro o glass detrás de un modal o bottom sheet.",
+    "values": {
+      "Default": 1200
+    }
+  },
+  {
+    "collection": "layers",
+    "name": "layer/sticky",
+    "type": "dimension",
+    "description": "Cabeceras, tab bar y barras fijas. La capa más baja.",
+    "values": {
+      "Default": 1000
+    }
+  },
+  {
+    "collection": "layers",
+    "name": "layer/toast",
+    "type": "dimension",
+    "description": "Avisos efímeros: siempre por encima del modal.",
+    "values": {
+      "Default": 1400
+    }
+  },
+  {
+    "collection": "layers",
+    "name": "layer/tooltip",
+    "type": "dimension",
+    "description": "Tooltips y coachmarks: lo más alto del sistema.",
+    "values": {
+      "Default": 1500
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/duration/extra-long",
+    "type": "duration",
+    "description": "700 ms · Gráficos y datos protagonistas que se dibujan. Nunca para controles.",
+    "values": {
+      "Default": 700
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/duration/long",
+    "type": "duration",
+    "description": "400 ms · Pantalla completa: entrar o salir de una vista.",
+    "values": {
+      "Default": 400
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/duration/medium",
+    "type": "duration",
+    "description": "250 ms · Cambios más grandes: hojas, transiciones.",
+    "values": {
+      "Default": 250
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/duration/micro",
+    "type": "duration",
+    "description": "100 ms · Micro-interacción: un check, un switch.",
+    "values": {
+      "Default": 100
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/duration/short",
+    "type": "duration",
+    "description": "200 ms · Lo de siempre: menús, tooltips.",
+    "values": {
+      "Default": 200
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/dwell/default",
+    "type": "dimension",
+    "description": "6 s · Base: el Snackbar. El contador arranca al montar y no se reinicia.",
+    "values": {
+      "Default": 6000
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/dwell/long",
+    "type": "dimension",
+    "description": "10 s · Mensaje con acción. Si no alcanza, el patrón es Alert.",
+    "values": {
+      "Default": 10000
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/dwell/short",
+    "type": "dimension",
+    "description": "4 s · Confirmación sin acción. No es animación: no se apaga con Reduce Motion.",
+    "values": {
+      "Default": 4000
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/easing/emphasized",
+    "type": "string",
+    "description": "Momentos con más carácter.",
+    "values": {
+      "Default": "cubic-bezier(0.05, 0.7, 0.1, 1)"
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/easing/enter",
+    "type": "string",
+    "description": "Algo que aparece: frena suave.",
+    "values": {
+      "Default": "cubic-bezier(0, 0, 0.2, 1)"
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/easing/exit",
+    "type": "string",
+    "description": "Algo que se va: acelera al salir.",
+    "values": {
+      "Default": "cubic-bezier(0.4, 0, 1, 1)"
+    }
+  },
+  {
+    "collection": "motion",
+    "name": "motion/easing/standard",
+    "type": "string",
+    "description": "Lo general, entra y sale.",
+    "values": {
+      "Default": "cubic-bezier(0.2, 0, 0, 1)"
+    }
+  },
+  {
+    "collection": "platform",
+    "name": "platform/size/field/height",
+    "type": "dimension",
+    "description": "Altura de la fila de un campo",
+    "values": {
+      "Android": 56,
+      "iOS": 52,
+      "web": 56
+    }
+  },
+  {
+    "collection": "platform",
+    "name": "platform/size/target/min",
+    "type": "dimension",
+    "description": "Área táctil mínima de la plataforma",
+    "values": {
+      "Android": 48,
+      "iOS": 44,
+      "web": 40
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/action/android",
+    "type": "dimension",
+    "description": "Botón · Android",
+    "alias": "radius-primitives.radius.scale.md",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/action/icon",
+    "type": "dimension",
+    "description": "Botón de icono",
+    "alias": "radius-primitives.radius.scale.full",
+    "values": {
+      "compact": 9999,
+      "expanded": 9999,
+      "regular": 9999
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/action/ios",
+    "type": "dimension",
+    "description": "Botón · iOS",
+    "alias": "radius-primitives.radius.scale.md",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/action/web",
+    "type": "dimension",
+    "description": "Botón · web",
+    "alias": "radius-primitives.radius.scale.md",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/control/sm/android",
+    "type": "dimension",
+    "description": "Checkbox y control pequeño · Android",
+    "alias": "radius-primitives.radius.scale.xs",
+    "values": {
+      "compact": 2,
+      "expanded": 2,
+      "regular": 2
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/control/sm/ios",
+    "type": "dimension",
+    "description": "Checkbox y control pequeño · iOS",
+    "alias": "radius-primitives.radius.scale.sm",
+    "values": {
+      "compact": 4,
+      "expanded": 4,
+      "regular": 4
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/control/sm/web",
+    "type": "dimension",
+    "description": "Checkbox y control pequeño · web",
+    "alias": "radius-primitives.radius.scale.sm",
+    "values": {
+      "compact": 4,
+      "expanded": 4,
+      "regular": 4
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/control/xs",
+    "type": "dimension",
+    "description": "Marcas de gráfico muy angostas",
+    "alias": "radius-primitives.radius.scale.xs",
+    "values": {
+      "compact": 2,
+      "expanded": 2,
+      "regular": 2
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/field/md/android",
+    "type": "dimension",
+    "description": "Campo de texto · Android",
+    "alias": "radius-primitives.radius.scale.sm",
+    "values": {
+      "compact": 4,
+      "expanded": 4,
+      "regular": 4
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/field/md/ios",
+    "type": "dimension",
+    "description": "Campo de texto · iOS",
+    "alias": "radius-primitives.radius.scale.md",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/field/md/web",
+    "type": "dimension",
+    "description": "Campo de texto · web",
+    "alias": "radius-primitives.radius.scale.md",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/field/sm/android",
+    "type": "dimension",
+    "description": "TextArea y OTP · Android",
+    "alias": "radius-primitives.radius.scale.sm",
+    "values": {
+      "compact": 4,
+      "expanded": 4,
+      "regular": 4
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/field/sm/ios",
+    "type": "dimension",
+    "description": "TextArea y OTP · iOS",
+    "alias": "radius-primitives.radius.scale.md",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/field/sm/web",
+    "type": "dimension",
+    "description": "TextArea y OTP · web",
+    "alias": "radius-primitives.radius.scale.md",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/action/android",
+    "type": "dimension",
+    "description": "Foco del botón · Android",
+    "values": {
+      "compact": 10,
+      "expanded": 10,
+      "regular": 10
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/action/ios",
+    "type": "dimension",
+    "description": "Foco del botón · iOS",
+    "values": {
+      "compact": 10,
+      "expanded": 10,
+      "regular": 10
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/action/web",
+    "type": "dimension",
+    "description": "Foco del botón · web",
+    "values": {
+      "compact": 10,
+      "expanded": 10,
+      "regular": 10
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/control",
+    "type": "dimension",
+    "description": "Foco de las filas de Menu",
+    "values": {
+      "compact": 6,
+      "expanded": 6,
+      "regular": 6
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/field/android",
+    "type": "dimension",
+    "description": "Foco de un campo · Android",
+    "values": {
+      "compact": 6,
+      "expanded": 6,
+      "regular": 6
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/field/ios",
+    "type": "dimension",
+    "description": "Foco de un campo · iOS",
+    "values": {
+      "compact": 10,
+      "expanded": 10,
+      "regular": 10
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/field/web",
+    "type": "dimension",
+    "description": "Foco de un campo · web",
+    "values": {
+      "compact": 10,
+      "expanded": 10,
+      "regular": 10
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/field-compact/android",
+    "type": "dimension",
+    "description": "Foco de TextArea y OTP · Android",
+    "values": {
+      "compact": 6,
+      "expanded": 6,
+      "regular": 6
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/field-compact/ios",
+    "type": "dimension",
+    "description": "Foco de TextArea y OTP · iOS",
+    "values": {
+      "compact": 10,
+      "expanded": 10,
+      "regular": 10
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/field-compact/web",
+    "type": "dimension",
+    "description": "Foco de TextArea y OTP · web",
+    "values": {
+      "compact": 10,
+      "expanded": 10,
+      "regular": 10
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/pill",
+    "type": "dimension",
+    "description": "Foco de chips y avatares",
+    "alias": "radius-primitives.radius.scale.full",
+    "values": {
+      "compact": 9999,
+      "expanded": 9999,
+      "regular": 9999
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/search/android",
+    "type": "dimension",
+    "description": "Foco de búsqueda · Android",
+    "alias": "radius-primitives.radius.scale.full",
+    "values": {
+      "compact": 9999,
+      "expanded": 9999,
+      "regular": 9999
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/search/ios",
+    "type": "dimension",
+    "description": "Foco de búsqueda · iOS",
+    "alias": "radius-primitives.radius.scale.full",
+    "values": {
+      "compact": 9999,
+      "expanded": 9999,
+      "regular": 9999
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/search/web",
+    "type": "dimension",
+    "description": "Foco de búsqueda · web",
+    "values": {
+      "compact": 10,
+      "expanded": 10,
+      "regular": 10
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/focus/surface",
+    "type": "dimension",
+    "description": "Anillo de foco de una tarjeta (radio + 2 px)",
+    "values": {
+      "compact": 14,
+      "expanded": 18,
+      "regular": 18
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/pill",
+    "type": "dimension",
+    "description": "Chip, etiqueta y avatar",
+    "alias": "radius-primitives.radius.scale.full",
+    "values": {
+      "compact": 9999,
+      "expanded": 9999,
+      "regular": 9999
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/search/android",
+    "type": "dimension",
+    "description": "Campo de búsqueda · Android",
+    "alias": "radius-primitives.radius.scale.full",
+    "values": {
+      "compact": 9999,
+      "expanded": 9999,
+      "regular": 9999
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/search/ios",
+    "type": "dimension",
+    "description": "Campo de búsqueda · iOS",
+    "alias": "radius-primitives.radius.scale.full",
+    "values": {
+      "compact": 9999,
+      "expanded": 9999,
+      "regular": 9999
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/search/web",
+    "type": "dimension",
+    "description": "Campo de búsqueda · web",
+    "alias": "radius-primitives.radius.scale.md",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/surface/lg",
+    "type": "dimension",
+    "description": "Hoja grande",
+    "alias": "radius-primitives.radius.scale.xl",
+    "values": {
+      "compact": 16,
+      "expanded": 24,
+      "regular": 24
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/surface/md",
+    "type": "dimension",
+    "description": "Tarjeta / modal",
+    "alias": "radius-primitives.radius.scale.lg",
+    "values": {
+      "compact": 12,
+      "expanded": 16,
+      "regular": 16
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/surface/sm",
+    "type": "dimension",
+    "description": "Tarjeta chica",
+    "alias": "radius-primitives.radius.scale.md",
+    "values": {
+      "compact": 8,
+      "expanded": 12,
+      "regular": 12
+    }
+  },
+  {
+    "collection": "radius",
+    "name": "radius/surface/xs",
+    "type": "dimension",
+    "description": "Superficie anidada (regla concéntrica)",
+    "alias": "radius-primitives.radius.scale.sm",
+    "values": {
+      "compact": 4,
+      "expanded": 4,
+      "regular": 4
+    }
+  },
+  {
+    "collection": "radius-primitives",
+    "name": "radius/scale/2xl",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 24
+    }
+  },
+  {
+    "collection": "radius-primitives",
+    "name": "radius/scale/full",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 9999
+    }
+  },
+  {
+    "collection": "radius-primitives",
+    "name": "radius/scale/lg",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 12
+    }
+  },
+  {
+    "collection": "radius-primitives",
+    "name": "radius/scale/md",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 8
+    }
+  },
+  {
+    "collection": "radius-primitives",
+    "name": "radius/scale/none",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 0
+    }
+  },
+  {
+    "collection": "radius-primitives",
+    "name": "radius/scale/sm",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 4
+    }
+  },
+  {
+    "collection": "radius-primitives",
+    "name": "radius/scale/xl",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 16
+    }
+  },
+  {
+    "collection": "radius-primitives",
+    "name": "radius/scale/xs",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 2
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "border/width/control-strong",
+    "type": "dimension",
+    "description": "Caja de Checkbox y Radio.",
+    "alias": "border-primitives.border.scale.md",
+    "values": {
+      "dark": 2,
+      "light": 2
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "border/width/default",
+    "type": "dimension",
+    "description": "Campos y tarjetas activas.",
+    "alias": "border-primitives.border.scale.sm",
+    "values": {
+      "dark": 1,
+      "light": 1
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "border/width/divider",
+    "type": "dimension",
+    "description": "Divisores de listas y secciones.",
+    "alias": "border-primitives.border.scale.sm",
+    "values": {
+      "dark": 1,
+      "light": 1
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "border/width/focus",
+    "type": "dimension",
+    "description": "Anillo de foco. No usar para selección.",
+    "alias": "border-primitives.border.scale.md",
+    "values": {
+      "dark": 2,
+      "light": 2
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "border/width/indicator",
+    "type": "dimension",
+    "description": "Lo seleccionado: tab activa, fila elegida. No usar para foco.",
+    "alias": "border-primitives.border.scale.md",
+    "values": {
+      "dark": 2,
+      "light": 2
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/overlay/far-blur",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 40,
+      "light": 40
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/overlay/far-y",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 20,
+      "light": 20
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/overlay/inner-top-y",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 1,
+      "light": 1
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/overlay/near-blur",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 8,
+      "light": 8
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/overlay/near-y",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 1,
+      "light": 1
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/panel/far-blur",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 56,
+      "light": 56
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/panel/far-spread",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": -12,
+      "light": -12
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/panel/far-y",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 24,
+      "light": 24
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/panel/glass-blur",
+    "type": "dimension",
+    "description": "Más esmerilado que raised: se lee como material, no como botón.",
+    "values": {
+      "dark": 24,
+      "light": 24
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/panel/inner-top-y",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 1,
+      "light": 1
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/panel/near-blur",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 16,
+      "light": 16
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/panel/near-y",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 6,
+      "light": 6
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/far-blur",
+    "type": "dimension",
+    "description": "Antes: 24",
+    "values": {
+      "dark": 40,
+      "light": 40
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/far-spread",
+    "type": "dimension",
+    "description": "Negativo para que la sombra quede bajo la tarjeta y no asome por los lados.",
+    "values": {
+      "dark": -8,
+      "light": -8
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/far-y",
+    "type": "dimension",
+    "description": "Antes: 9",
+    "values": {
+      "dark": 16,
+      "light": 16
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/glass-blur",
+    "type": "dimension",
+    "description": "Desenfoque de fondo del vidrio. Antes: 48",
+    "values": {
+      "dark": 20,
+      "light": 20
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/inner-bottom-blur",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 6,
+      "light": 6
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/inner-bottom-y",
+    "type": "dimension",
+    "description": "Antes: -1",
+    "values": {
+      "dark": -2,
+      "light": -2
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/inner-top-blur",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 1,
+      "light": 1
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/inner-top-y",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 1,
+      "light": 1
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/near-blur",
+    "type": "dimension",
+    "description": "Antes: 8",
+    "values": {
+      "dark": 4,
+      "light": 4
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/raised/near-y",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 2,
+      "light": 2
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "elevation/scrim/glass-blur",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "dark": 24,
+      "light": 24
+    }
+  },
+  {
+    "collection": "semantic",
+    "name": "opacity/disabled",
+    "type": "number",
+    "description": "60 · Solo logos, fotos e ilustraciones apagadas. Texto e iconos usan su color disabled.",
+    "values": {
+      "dark": 60,
+      "light": 60
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/bar/height/lg",
+    "type": "dimension",
+    "description": "Barra de progreso gruesa",
+    "values": {
+      "default": 12,
+      "expanded": 12
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/bar/height/md",
+    "type": "dimension",
+    "description": "Barra de progreso estándar",
+    "values": {
+      "default": 8,
+      "expanded": 8
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/bar/height/sm",
+    "type": "dimension",
+    "description": "Barra de progreso fina",
+    "values": {
+      "default": 4,
+      "expanded": 4
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/control/height/lg",
+    "type": "dimension",
+    "description": "Botón grande",
+    "values": {
+      "default": 56,
+      "expanded": 56
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/control/height/md",
+    "type": "dimension",
+    "description": "Botón estándar",
+    "values": {
+      "default": 44,
+      "expanded": 48
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/control/height/sm",
+    "type": "dimension",
+    "description": "Botón chico",
+    "values": {
+      "default": 32,
+      "expanded": 36
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/control/height/xs",
+    "type": "dimension",
+    "description": "Control mínimo, chips y tags",
+    "values": {
+      "default": 24,
+      "expanded": 24
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/control/min-width",
+    "type": "dimension",
+    "description": "Ancho mínimo de botón",
+    "values": {
+      "default": 64,
+      "expanded": 64
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/field/height/lg",
+    "type": "dimension",
+    "description": "Campo grande",
+    "values": {
+      "default": 56,
+      "expanded": 56
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/field/height/md",
+    "type": "dimension",
+    "description": "Campo estándar",
+    "values": {
+      "default": 44,
+      "expanded": 48
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/icon/2xs",
+    "type": "dimension",
+    "description": "Icono mínimo, indicadores",
+    "values": {
+      "default": 8,
+      "expanded": 8
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/icon/lg",
+    "type": "dimension",
+    "description": "Icono grande",
+    "values": {
+      "default": 32,
+      "expanded": 32
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/icon/md",
+    "type": "dimension",
+    "description": "Icono estándar",
+    "values": {
+      "default": 24,
+      "expanded": 24
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/icon/sm",
+    "type": "dimension",
+    "description": "Icono inline en texto y controles sm",
+    "values": {
+      "default": 16,
+      "expanded": 16
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/icon/xl",
+    "type": "dimension",
+    "description": "Icono destacados",
+    "values": {
+      "default": 40,
+      "expanded": 40
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/icon/xs",
+    "type": "dimension",
+    "description": "Icono muy chico",
+    "values": {
+      "default": 12,
+      "expanded": 12
+    }
+  },
+  {
+    "collection": "size",
+    "name": "size/target/min",
+    "type": "dimension",
+    "description": "Área táctil mínima (valor de diseño)",
+    "values": {
+      "default": 48,
+      "expanded": 48
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/doc/xl",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.72",
+    "values": {
+      "compact": 72,
+      "expanded": 72,
+      "regular": 72
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/gutter/lg",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.24",
+    "values": {
+      "compact": 24,
+      "expanded": 40,
+      "regular": 32
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/gutter/md",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.16",
+    "values": {
+      "compact": 16,
+      "expanded": 24,
+      "regular": 24
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/gutter/sm",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.8",
+    "values": {
+      "compact": 8,
+      "expanded": 16,
+      "regular": 12
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inline/2xl",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.32",
+    "values": {
+      "compact": 32,
+      "expanded": 40,
+      "regular": 32
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inline/lg",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.16",
+    "values": {
+      "compact": 16,
+      "expanded": 24,
+      "regular": 16
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inline/md",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.12",
+    "values": {
+      "compact": 12,
+      "expanded": 16,
+      "regular": 12
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inline/sm",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.8",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inline/xl",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.24",
+    "values": {
+      "compact": 24,
+      "expanded": 32,
+      "regular": 24
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inline/xs",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.4",
+    "values": {
+      "compact": 4,
+      "expanded": 4,
+      "regular": 4
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inset/2xl",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.32",
+    "values": {
+      "compact": 32,
+      "expanded": 48,
+      "regular": 40
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inset/3xl",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.48",
+    "values": {
+      "compact": 48,
+      "expanded": 48,
+      "regular": 48
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inset/lg",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.16",
+    "values": {
+      "compact": 16,
+      "expanded": 24,
+      "regular": 24
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inset/md",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.12",
+    "values": {
+      "compact": 12,
+      "expanded": 16,
+      "regular": 16
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inset/sm",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.8",
+    "values": {
+      "compact": 8,
+      "expanded": 12,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inset/xl",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.24",
+    "values": {
+      "compact": 24,
+      "expanded": 40,
+      "regular": 32
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/inset/xs",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.4",
+    "values": {
+      "compact": 4,
+      "expanded": 8,
+      "regular": 4
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/stack/2xl",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.32",
+    "values": {
+      "compact": 32,
+      "expanded": 64,
+      "regular": 48
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/stack/lg",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.16",
+    "values": {
+      "compact": 16,
+      "expanded": 24,
+      "regular": 24
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/stack/md",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.12",
+    "values": {
+      "compact": 12,
+      "expanded": 16,
+      "regular": 16
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/stack/sm",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.8",
+    "values": {
+      "compact": 8,
+      "expanded": 8,
+      "regular": 8
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/stack/xl",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.24",
+    "values": {
+      "compact": 24,
+      "expanded": 40,
+      "regular": 32
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/stack/xs",
+    "type": "dimension",
+    "description": "",
+    "alias": "spacing-primitives.space.scale.4",
+    "values": {
+      "compact": 4,
+      "expanded": 4,
+      "regular": 4
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/0",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 0
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/2",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 2
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/4",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 4
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/8",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 8
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/12",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 12
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/16",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 16
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/20",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 20
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/24",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 24
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/32",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 32
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/40",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 40
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/48",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 48
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/64",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 64
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/72",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 72
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/80",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 80
+    }
+  },
+  {
+    "collection": "spacing-primitives",
+    "name": "space/scale/96",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 96
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/family/display",
+    "type": "fontFamily",
+    "description": "Títulos y cifras grandes",
+    "values": {
+      "Default": "Kia Signature"
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/family/mono",
+    "type": "fontFamily",
+    "description": "Solo text/code/*",
+    "values": {
+      "Default": "IBM Plex Mono"
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/family/text",
+    "type": "fontFamily",
+    "description": "Cuerpo, etiquetas y datos",
+    "values": {
+      "Default": "Kia Signature"
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/letter-spacing/loose",
+    "type": "dimension",
+    "description": "Caption a 10 px · Valor en %. Figma aplica las variables de tracking en px, por eso los estilos de texto llevan el % directo y esta variable es la referencia para código.",
+    "values": {
+      "Default": 1.5
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/letter-spacing/none",
+    "type": "dimension",
+    "description": "Cuerpo · Valor en %. Figma aplica las variables de tracking en px, por eso los estilos de texto llevan el % directo y esta variable es la referencia para código.",
+    "values": {
+      "Default": 0
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/letter-spacing/snug",
+    "type": "dimension",
+    "description": "Títulos y cifras de 18 a 24 px · Valor en %. Figma aplica las variables de tracking en px, por eso los estilos de texto llevan el % directo y esta variable es la referencia para código.",
+    "values": {
+      "Default": -1
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/letter-spacing/tight",
+    "type": "dimension",
+    "description": "Display y amount/hero a 32 px · Valor en %. Figma aplica las variables de tracking en px, por eso los estilos de texto llevan el % directo y esta variable es la referencia para código.",
+    "values": {
+      "Default": -2
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/letter-spacing/wide",
+    "type": "dimension",
+    "description": "Overline y OTP · Valor en %. Figma aplica las variables de tracking en px, por eso los estilos de texto llevan el % directo y esta variable es la referencia para código.",
+    "values": {
+      "Default": 8
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/line-height/16",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 16
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/line-height/20",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 20
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/line-height/24",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 24
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/line-height/28",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 28
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/line-height/32",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 32
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/line-height/40",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 40
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/amount/hero",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 32
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/amount/lg",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 24
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/amount/md",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 16
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/amount/sm",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 14
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/body/lg",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 16
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/body/md",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 14
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/body/sm",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 12
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/caption/sm",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 10
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/code/md",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 16
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/code/sm",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 14
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/code/xs",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 12
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/display/lg",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 32
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/heading/lg",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 24
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/heading/md",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 20
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/heading/sm",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 18
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/otp",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 24
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/overline",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 10
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/unit/md",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 14
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/size/unit/sm",
+    "type": "dimension",
+    "description": "",
+    "values": {
+      "Default": 12
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/style/bold",
+    "type": "string",
+    "description": "Solo text/unit/*",
+    "alias": "typography.font.weight.bold",
+    "values": {
+      "Default": "Bold"
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/style/emphasis",
+    "type": "string",
+    "description": "Jerarquía y acción",
+    "alias": "typography.font.weight.bold",
+    "values": {
+      "Default": "Bold"
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/style/light",
+    "type": "string",
+    "description": "Peso de marca, solo a 24 px o más",
+    "alias": "typography.font.weight.light",
+    "values": {
+      "Default": "Light"
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/style/regular",
+    "type": "string",
+    "description": "Lectura",
+    "alias": "typography.font.weight.regular",
+    "values": {
+      "Default": "Regular"
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/weight/bold",
+    "type": "string",
+    "description": "600 — peso real del archivo",
+    "values": {
+      "Default": "Bold"
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/weight/light",
+    "type": "string",
+    "description": "300",
+    "values": {
+      "Default": "Light"
+    }
+  },
+  {
+    "collection": "typography",
+    "name": "font/weight/regular",
+    "type": "string",
+    "description": "400",
+    "values": {
+      "Default": "Regular"
+    }
+  }
+]

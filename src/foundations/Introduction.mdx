@@ -1,0 +1,18 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introducción" />
+
+# KIA Design System
+
+Documentación viva del design system de la app KIA (React Native).
+
+- **Foundations**: Color, Spacing y Typography, generadas desde los `kia-*-tokens.md` (que a su vez salen del archivo de Figma `FoundatiosKia`).
+- **Components**: componentes React Native renderizados en web con `react-native-web`.
+
+## Flujo de trabajo
+
+1. Actualiza los `.md` de tokens cuando cambie Figma.
+2. `npm run tokens` regenera `src/tokens/tokens.ts` y `tokens.data.json` (se ejecuta solo con `npm run storybook`).
+3. Los componentes consumen tokens con `useTheme()`; nunca hex sueltos.
+
+Usa la barra superior para cambiar **Tema** (la app solo usa dark; light es reserva) y **Densidad** de spacing.

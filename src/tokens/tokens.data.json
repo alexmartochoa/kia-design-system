@@ -1,0 +1,1687 @@
+{
+  "color": {
+    "ramps": [
+      {
+        "name": "midnight",
+        "role": "Primaria · neutro de la UI (ancla: 975)",
+        "steps": {
+          "25": "#F8F8F8",
+          "50": "#F0F1F2",
+          "100": "#E6E8E9",
+          "200": "#CDD0D2",
+          "300": "#B4B8BC",
+          "400": "#9BA1A5",
+          "500": "#828A8F",
+          "600": "#697279",
+          "700": "#505B62",
+          "800": "#37434C",
+          "900": "#23303A",
+          "950": "#14222C",
+          "975": "#05141F"
+        }
+      },
+      {
+        "name": "gray",
+        "role": "Primaria · escala de soporte",
+        "steps": {
+          "25": "#FAFAFA",
+          "50": "#F0F0F1",
+          "100": "#E0E0E1",
+          "200": "#C7C8CA",
+          "300": "#AFB0B2",
+          "400": "#939598",
+          "500": "#7F8083",
+          "600": "#6D6E71",
+          "700": "#58595C",
+          "800": "#454648",
+          "900": "#333436",
+          "950": "#252527",
+          "975": "#19191A"
+        }
+      },
+      {
+        "name": "live",
+        "role": "Acento",
+        "steps": {
+          "25": "#FFF8F8",
+          "50": "#FFF2F0",
+          "100": "#FFE2DF",
+          "200": "#FFC6C0",
+          "300": "#FF9A93",
+          "400": "#FF5D5B",
+          "500": "#EA0029",
+          "600": "#C40021",
+          "700": "#A4001A",
+          "800": "#880013",
+          "900": "#68000C",
+          "950": "#4D0007",
+          "975": "#380004"
+        }
+      },
+      {
+        "name": "forest",
+        "role": "Secundaria · verde de app",
+        "steps": {
+          "25": "#F7FCF2",
+          "50": "#F1F8E8",
+          "100": "#E2EFD3",
+          "200": "#C9DFAE",
+          "300": "#ABCA85",
+          "400": "#8FB162",
+          "500": "#759645",
+          "600": "#5D7D2B",
+          "700": "#496619",
+          "800": "#38500D",
+          "900": "#283B04",
+          "950": "#1C2B01",
+          "975": "#121E00"
+        }
+      },
+      {
+        "name": "yellow",
+        "role": "Secundaria · Afternoon Yellow",
+        "steps": {
+          "25": "#FFFAEF",
+          "50": "#FFF4DE",
+          "100": "#FFECC1",
+          "200": "#FFD97E",
+          "300": "#F3C300",
+          "400": "#D0A400",
+          "500": "#A98700",
+          "600": "#866C00",
+          "700": "#6C5700",
+          "800": "#554500",
+          "900": "#3F3300",
+          "950": "#2D2500",
+          "975": "#1F1900"
+        }
+      },
+      {
+        "name": "city",
+        "role": "Secundaria · Kia City Gray",
+        "steps": {
+          "25": "#FAFAFA",
+          "50": "#F4F5F5",
+          "100": "#E8EAEA",
+          "200": "#D3D5D6",
+          "300": "#BABCBD",
+          "400": "#9EA1A2",
+          "500": "#848788",
+          "600": "#6B6E6F",
+          "700": "#575A5B",
+          "800": "#454747",
+          "900": "#333435",
+          "950": "#242526",
+          "975": "#181A1A"
+        }
+      },
+      {
+        "name": "emerald",
+        "role": "Éxito (ref. en 700)",
+        "steps": {
+          "25": "#F2FDF6",
+          "50": "#E8FBEF",
+          "100": "#D2F3DF",
+          "200": "#ADE5C3",
+          "300": "#7FD3A4",
+          "400": "#57BA86",
+          "500": "#339E6A",
+          "600": "#058452",
+          "700": "#006B41",
+          "800": "#005533",
+          "900": "#003F25",
+          "950": "#002E19",
+          "975": "#002010"
+        }
+      },
+      {
+        "name": "amber",
+        "role": "Advertencia",
+        "steps": {
+          "25": "#FFF9F3",
+          "50": "#FFF3E7",
+          "100": "#FFE4C9",
+          "200": "#FBCC9B",
+          "300": "#EFAF67",
+          "400": "#D99139",
+          "500": "#BD7500",
+          "600": "#9B5F00",
+          "700": "#7E4C00",
+          "800": "#643C00",
+          "900": "#4C2C00",
+          "950": "#371F00",
+          "975": "#271400"
+        }
+      },
+      {
+        "name": "red",
+        "role": "Error",
+        "steps": {
+          "25": "#FFF8F7",
+          "50": "#FFF2EE",
+          "100": "#FFE2DA",
+          "200": "#FFC7B7",
+          "300": "#FFA289",
+          "400": "#FC744F",
+          "500": "#DE552E",
+          "600": "#C03809",
+          "700": "#9E2A00",
+          "800": "#7F1F00",
+          "900": "#601600",
+          "950": "#470E00",
+          "975": "#340700"
+        }
+      },
+      {
+        "name": "steel",
+        "role": "Posición / selección · información",
+        "steps": {
+          "25": "#F6FBFF",
+          "50": "#EDF7FF",
+          "100": "#DAECFB",
+          "200": "#BAD8F1",
+          "300": "#94BFE1",
+          "400": "#72A2C8",
+          "500": "#5889AF",
+          "600": "#417297",
+          "700": "#325E7F",
+          "800": "#244A66",
+          "900": "#18374E",
+          "950": "#0F283A",
+          "975": "#081B29"
+        }
+      },
+      {
+        "name": "teal",
+        "role": "Talleres · mantenimiento",
+        "steps": {
+          "25": "#F3FCFE",
+          "50": "#EAF8FB",
+          "100": "#D5EFF4",
+          "200": "#B2DFE7",
+          "300": "#89CAD6",
+          "400": "#65B1BE",
+          "500": "#4595A2",
+          "600": "#287B88",
+          "700": "#146470",
+          "800": "#08505A",
+          "900": "#013C44",
+          "950": "#002B31",
+          "975": "#001E23"
+        }
+      },
+      {
+        "name": "plum",
+        "role": "Rutas alternativas · prueba de manejo",
+        "steps": {
+          "25": "#FBF9FF",
+          "50": "#F7F3FF",
+          "100": "#EEE4FF",
+          "200": "#DDCCFB",
+          "300": "#C9B0F0",
+          "400": "#AF93DB",
+          "500": "#9477BF",
+          "600": "#7B5EA4",
+          "700": "#644A89",
+          "800": "#4F396E",
+          "900": "#3C2955",
+          "950": "#2B1D3F",
+          "975": "#1E132D"
+        }
+      }
+    ],
+    "alpha": [
+      {
+        "name": "alpha/white/5",
+        "value": "#FFFFFF0D",
+        "opacity": "5 %",
+        "usage": "Hover sobre oscuro"
+      },
+      {
+        "name": "alpha/white/10",
+        "value": "#FFFFFF1A",
+        "opacity": "10 %",
+        "usage": "Pressed sobre oscuro, divisores"
+      },
+      {
+        "name": "alpha/white/15",
+        "value": "#FFFFFF26",
+        "opacity": "15 %",
+        "usage": "`surface/glass-strong` y estado activado (nuevo)"
+      },
+      {
+        "name": "alpha/white/20",
+        "value": "#FFFFFF33",
+        "opacity": "20 %",
+        "usage": "Bordes sobre oscuro (nuevo)"
+      },
+      {
+        "name": "alpha/white/30",
+        "value": "#FFFFFF4C",
+        "opacity": "30 %",
+        "usage": "Brillo interior"
+      },
+      {
+        "name": "alpha/white/60",
+        "value": "#FFFFFF99",
+        "opacity": "60 %",
+        "usage": "Texto secundario sobre foto, borde fuerte"
+      },
+      {
+        "name": "alpha/white/80",
+        "value": "#FFFFFFCC",
+        "opacity": "80 %",
+        "usage": "Superficies translúcidas"
+      },
+      {
+        "name": "alpha/midnight/5",
+        "value": "#05141F0D",
+        "opacity": "5 %",
+        "usage": "Hover sobre claro"
+      },
+      {
+        "name": "alpha/midnight/10",
+        "value": "#05141F1A",
+        "opacity": "10 %",
+        "usage": "Pressed sobre claro, divisores"
+      },
+      {
+        "name": "alpha/midnight/20",
+        "value": "#05141F33",
+        "opacity": "20 %",
+        "usage": "Bordes sobre claro"
+      },
+      {
+        "name": "alpha/midnight/40",
+        "value": "#05141F66",
+        "opacity": "40 %",
+        "usage": "Scrim de modales"
+      },
+      {
+        "name": "alpha/midnight/60",
+        "value": "#05141F99",
+        "opacity": "60 %",
+        "usage": "Degradado sobre foto"
+      },
+      {
+        "name": "alpha/midnight/80",
+        "value": "#05141FCC",
+        "opacity": "80 %",
+        "usage": "Superficies translúcidas oscuras"
+      },
+      {
+        "name": "alpha/forest/10",
+        "value": "#5D7D2B1A",
+        "opacity": "10 %",
+        "usage": "Fondo de selección"
+      },
+      {
+        "name": "alpha/forest/20",
+        "value": "#5D7D2B33",
+        "opacity": "20 %",
+        "usage": "Hover sobre selección"
+      },
+      {
+        "name": "alpha/forest/50",
+        "value": "#5D7D2B80",
+        "opacity": "50 %",
+        "usage": "Elementos deshabilitados en verde"
+      },
+      {
+        "name": "alpha/black/15",
+        "value": "#00000026",
+        "opacity": "15 %",
+        "usage": "Sombra cercana de Raised (nuevo)"
+      },
+      {
+        "name": "alpha/black/25",
+        "value": "#00000040",
+        "opacity": "25 %",
+        "usage": "Sombra cercana de Overlay (nuevo)"
+      },
+      {
+        "name": "alpha/black/35",
+        "value": "#00000059",
+        "opacity": "35 %",
+        "usage": "Sombra lejana de Raised (nuevo; hoy 33 %)"
+      },
+      {
+        "name": "alpha/black/40",
+        "value": "#00000066",
+        "opacity": "40 %",
+        "usage": "Sombra lejana de Overlay (nuevo)"
+      },
+      {
+        "name": "alpha/sage/5",
+        "value": "#DAE8E00D",
+        "opacity": "5 %",
+        "usage": "Reserva para el glass verde en estados suaves (nuevo)"
+      },
+      {
+        "name": "alpha/sage/10",
+        "value": "#DAE8E01A",
+        "opacity": "10 %",
+        "usage": "Final del degradado del botón glass (nuevo)"
+      },
+      {
+        "name": "alpha/sage/15",
+        "value": "#DAE8E026",
+        "opacity": "15 %",
+        "usage": "Inicio del degradado del botón glass (nuevo)"
+      },
+      {
+        "name": "alpha/sage/25",
+        "value": "#DAE8E040",
+        "opacity": "25 %",
+        "usage": "Borde del botón glass (nuevo)"
+      }
+    ],
+    "static": [
+      {
+        "name": "static/white",
+        "value": "#FFFFFF",
+        "opacity": "100 %",
+        "usage": "Blanco que no cambia con el tema"
+      },
+      {
+        "name": "static/midnight",
+        "value": "#05141F",
+        "opacity": "100 %",
+        "usage": "Midnight que no cambia con el tema"
+      }
+    ],
+    "semantic": [
+      {
+        "name": "color/surface/base",
+        "group": "surface",
+        "dark": "#05141F",
+        "light": "#FFFFFF",
+        "darkRef": "midnight/975",
+        "lightRef": "static/white",
+        "description": ""
+      },
+      {
+        "name": "color/surface/sunken",
+        "group": "surface",
+        "dark": "#14222C",
+        "light": "#F8F8F8",
+        "darkRef": "midnight/950",
+        "lightRef": "midnight/25",
+        "description": ""
+      },
+      {
+        "name": "color/surface/glass",
+        "group": "surface",
+        "dark": "#FFFFFF1A",
+        "light": "#FFFFFFCC",
+        "darkRef": "alpha/white/10",
+        "lightRef": "alpha/white/80",
+        "description": ""
+      },
+      {
+        "name": "color/surface/glass-strong",
+        "group": "surface",
+        "dark": "#FFFFFF26",
+        "light": "#FFFFFF",
+        "darkRef": "alpha/white/15",
+        "lightRef": "static/white",
+        "description": ""
+      },
+      {
+        "name": "color/surface/overlay",
+        "group": "surface",
+        "dark": "#14222C",
+        "light": "#FFFFFF",
+        "darkRef": "midnight/950",
+        "lightRef": "static/white",
+        "description": ""
+      },
+      {
+        "name": "color/surface/scrim",
+        "group": "surface",
+        "dark": "#05141F99",
+        "light": "#05141F66",
+        "darkRef": "alpha/midnight/60",
+        "lightRef": "alpha/midnight/40",
+        "description": ""
+      },
+      {
+        "name": "color/border/subtle",
+        "group": "border",
+        "dark": "#FFFFFF1A",
+        "light": "#05141F1A",
+        "darkRef": "alpha/white/10",
+        "lightRef": "alpha/midnight/10",
+        "description": ""
+      },
+      {
+        "name": "color/border/default",
+        "group": "border",
+        "dark": "#FFFFFF33",
+        "light": "#05141F33",
+        "darkRef": "alpha/white/20",
+        "lightRef": "alpha/midnight/20",
+        "description": ""
+      },
+      {
+        "name": "color/border/strong",
+        "group": "border",
+        "dark": "#FFFFFF99",
+        "light": "#828A8F",
+        "darkRef": "alpha/white/60",
+        "lightRef": "midnight/500",
+        "description": ""
+      },
+      {
+        "name": "color/border/focus",
+        "group": "border",
+        "dark": "#72A2C8",
+        "light": "#417297",
+        "darkRef": "steel/400",
+        "lightRef": "steel/600",
+        "description": ""
+      },
+      {
+        "name": "color/border/selected",
+        "group": "border",
+        "dark": "#8FB162",
+        "light": "#5D7D2B",
+        "darkRef": "forest/400",
+        "lightRef": "forest/600",
+        "description": ""
+      },
+      {
+        "name": "color/border/action/primary/outline/default",
+        "group": "border",
+        "dark": "#FFFFFF",
+        "light": "#05141F",
+        "darkRef": "static/white",
+        "lightRef": "midnight/975",
+        "description": ""
+      },
+      {
+        "name": "color/border/action/primary/glass/default",
+        "group": "border",
+        "dark": "#DAE8E040",
+        "light": "#05141F1A",
+        "darkRef": "alpha/sage/25",
+        "lightRef": "alpha/midnight/10",
+        "description": ""
+      },
+      {
+        "name": "color/border/action/danger/outline/default",
+        "group": "border",
+        "dark": "#FC744F",
+        "light": "#C03809",
+        "darkRef": "red/400",
+        "lightRef": "red/600",
+        "description": ""
+      },
+      {
+        "name": "color/border/success",
+        "group": "border",
+        "dark": "#57BA86",
+        "light": "#058452",
+        "darkRef": "emerald/400",
+        "lightRef": "emerald/600",
+        "description": ""
+      },
+      {
+        "name": "color/border/warning",
+        "group": "border",
+        "dark": "#D99139",
+        "light": "#9B5F00",
+        "darkRef": "amber/400",
+        "lightRef": "amber/600",
+        "description": ""
+      },
+      {
+        "name": "color/border/danger",
+        "group": "border",
+        "dark": "#FC744F",
+        "light": "#C03809",
+        "darkRef": "red/400",
+        "lightRef": "red/600",
+        "description": ""
+      },
+      {
+        "name": "color/border/info",
+        "group": "border",
+        "dark": "#72A2C8",
+        "light": "#417297",
+        "darkRef": "steel/400",
+        "lightRef": "steel/600",
+        "description": ""
+      },
+      {
+        "name": "color/text/primary",
+        "group": "text",
+        "dark": "#F8F8F8",
+        "light": "#05141F",
+        "darkRef": "midnight/25",
+        "lightRef": "midnight/975",
+        "description": ""
+      },
+      {
+        "name": "color/text/secondary",
+        "group": "text",
+        "dark": "#CDD0D2",
+        "light": "#505B62",
+        "darkRef": "midnight/200",
+        "lightRef": "midnight/700",
+        "description": ""
+      },
+      {
+        "name": "color/text/tertiary",
+        "group": "text",
+        "dark": "#9BA1A5",
+        "light": "#697279",
+        "darkRef": "midnight/400",
+        "lightRef": "midnight/600",
+        "description": ""
+      },
+      {
+        "name": "color/text/disabled",
+        "group": "text",
+        "dark": "#697279",
+        "light": "#9BA1A5",
+        "darkRef": "midnight/600",
+        "lightRef": "midnight/400",
+        "description": ""
+      },
+      {
+        "name": "color/text/on-fill",
+        "group": "text",
+        "dark": "#FFFFFF",
+        "light": "#FFFFFF",
+        "darkRef": "static/white",
+        "lightRef": "static/white",
+        "description": ""
+      },
+      {
+        "name": "color/text/link",
+        "group": "text",
+        "dark": "#94BFE1",
+        "light": "#325E7F",
+        "darkRef": "steel/300",
+        "lightRef": "steel/700",
+        "description": ""
+      },
+      {
+        "name": "color/text/action/primary/default",
+        "group": "text",
+        "dark": "#FFFFFF",
+        "light": "#FFFFFF",
+        "darkRef": "static/white",
+        "lightRef": "static/white",
+        "description": ""
+      },
+      {
+        "name": "color/text/action/primary/outline/default",
+        "group": "text",
+        "dark": "#F8F8F8",
+        "light": "#05141F",
+        "darkRef": "midnight/25",
+        "lightRef": "midnight/975",
+        "description": ""
+      },
+      {
+        "name": "color/text/action/primary/glass/default",
+        "group": "text",
+        "dark": "#F8F8F8",
+        "light": "#05141F",
+        "darkRef": "midnight/25",
+        "lightRef": "midnight/975",
+        "description": ""
+      },
+      {
+        "name": "color/text/action/primary/ghost/default",
+        "group": "text",
+        "dark": "#8FB162",
+        "light": "#496619",
+        "darkRef": "forest/400",
+        "lightRef": "forest/700",
+        "description": ""
+      },
+      {
+        "name": "color/text/action/danger/default",
+        "group": "text",
+        "dark": "#FFFFFF",
+        "light": "#FFFFFF",
+        "darkRef": "static/white",
+        "lightRef": "static/white",
+        "description": ""
+      },
+      {
+        "name": "color/text/action/danger/outline/default",
+        "group": "text",
+        "dark": "#FFA289",
+        "light": "#9E2A00",
+        "darkRef": "red/300",
+        "lightRef": "red/700",
+        "description": ""
+      },
+      {
+        "name": "color/text/action/danger/ghost/default",
+        "group": "text",
+        "dark": "#FFA289",
+        "light": "#9E2A00",
+        "darkRef": "red/300",
+        "lightRef": "red/700",
+        "description": ""
+      },
+      {
+        "name": "color/text/success",
+        "group": "text",
+        "dark": "#7FD3A4",
+        "light": "#006B41",
+        "darkRef": "emerald/300",
+        "lightRef": "emerald/700",
+        "description": ""
+      },
+      {
+        "name": "color/text/warning",
+        "group": "text",
+        "dark": "#EFAF67",
+        "light": "#7E4C00",
+        "darkRef": "amber/300",
+        "lightRef": "amber/700",
+        "description": ""
+      },
+      {
+        "name": "color/text/danger",
+        "group": "text",
+        "dark": "#FFA289",
+        "light": "#9E2A00",
+        "darkRef": "red/300",
+        "lightRef": "red/700",
+        "description": ""
+      },
+      {
+        "name": "color/text/info",
+        "group": "text",
+        "dark": "#94BFE1",
+        "light": "#325E7F",
+        "darkRef": "steel/300",
+        "lightRef": "steel/700",
+        "description": ""
+      },
+      {
+        "name": "color/icon/default",
+        "group": "icon",
+        "dark": "#E6E8E9",
+        "light": "#37434C",
+        "darkRef": "midnight/100",
+        "lightRef": "midnight/800",
+        "description": ""
+      },
+      {
+        "name": "color/icon/subtle",
+        "group": "icon",
+        "dark": "#9BA1A5",
+        "light": "#697279",
+        "darkRef": "midnight/400",
+        "lightRef": "midnight/600",
+        "description": ""
+      },
+      {
+        "name": "color/icon/highlight",
+        "group": "icon",
+        "dark": "#F3C300",
+        "light": "#A98700",
+        "darkRef": "yellow/300",
+        "lightRef": "yellow/500",
+        "description": ""
+      },
+      {
+        "name": "color/icon/action/primary/ghost/default",
+        "group": "icon",
+        "dark": "#8FB162",
+        "light": "#5D7D2B",
+        "darkRef": "forest/400",
+        "lightRef": "forest/600",
+        "description": ""
+      },
+      {
+        "name": "color/icon/success",
+        "group": "icon",
+        "dark": "#57BA86",
+        "light": "#058452",
+        "darkRef": "emerald/400",
+        "lightRef": "emerald/600",
+        "description": ""
+      },
+      {
+        "name": "color/icon/warning",
+        "group": "icon",
+        "dark": "#D99139",
+        "light": "#9B5F00",
+        "darkRef": "amber/400",
+        "lightRef": "amber/600",
+        "description": ""
+      },
+      {
+        "name": "color/icon/danger",
+        "group": "icon",
+        "dark": "#FC744F",
+        "light": "#C03809",
+        "darkRef": "red/400",
+        "lightRef": "red/600",
+        "description": ""
+      },
+      {
+        "name": "color/icon/info",
+        "group": "icon",
+        "dark": "#72A2C8",
+        "light": "#417297",
+        "darkRef": "steel/400",
+        "lightRef": "steel/600",
+        "description": ""
+      },
+      {
+        "name": "color/fill/action/primary/default",
+        "group": "fill",
+        "dark": "#5D7D2B",
+        "light": "#5D7D2B",
+        "darkRef": "forest/600",
+        "lightRef": "forest/600",
+        "description": ""
+      },
+      {
+        "name": "color/fill/action/primary/pressed",
+        "group": "fill",
+        "dark": "#496619",
+        "light": "#496619",
+        "darkRef": "forest/700",
+        "lightRef": "forest/700",
+        "description": ""
+      },
+      {
+        "name": "color/fill/action/primary/outline/pressed",
+        "group": "fill",
+        "dark": "#FFFFFF1A",
+        "light": "#05141F1A",
+        "darkRef": "alpha/white/10",
+        "lightRef": "alpha/midnight/10",
+        "description": ""
+      },
+      {
+        "name": "color/fill/action/primary/glass/default",
+        "group": "fill",
+        "dark": "#DAE8E026",
+        "light": "#F1F8E8",
+        "darkRef": "alpha/sage/15",
+        "lightRef": "forest/50",
+        "description": ""
+      },
+      {
+        "name": "color/fill/action/primary/glass/gradient-end",
+        "group": "fill",
+        "dark": "#DAE8E01A",
+        "light": "#F1F8E8",
+        "darkRef": "alpha/sage/10",
+        "lightRef": "forest/50",
+        "description": ""
+      },
+      {
+        "name": "color/fill/action/primary/ghost/pressed",
+        "group": "fill",
+        "dark": "#5D7D2B33",
+        "light": "#5D7D2B1A",
+        "darkRef": "alpha/forest/20",
+        "lightRef": "alpha/forest/10",
+        "description": ""
+      },
+      {
+        "name": "color/fill/action/danger/default",
+        "group": "fill",
+        "dark": "#C03809",
+        "light": "#C03809",
+        "darkRef": "red/600",
+        "lightRef": "red/600",
+        "description": ""
+      },
+      {
+        "name": "color/fill/action/danger/pressed",
+        "group": "fill",
+        "dark": "#9E2A00",
+        "light": "#9E2A00",
+        "darkRef": "red/700",
+        "lightRef": "red/700",
+        "description": ""
+      },
+      {
+        "name": "color/fill/success/default",
+        "group": "fill",
+        "dark": "#058452",
+        "light": "#058452",
+        "darkRef": "emerald/600",
+        "lightRef": "emerald/600",
+        "description": ""
+      },
+      {
+        "name": "color/fill/success/subtle",
+        "group": "fill",
+        "dark": "#002E19",
+        "light": "#E8FBEF",
+        "darkRef": "emerald/950",
+        "lightRef": "emerald/50",
+        "description": ""
+      },
+      {
+        "name": "color/fill/warning/default",
+        "group": "fill",
+        "dark": "#9B5F00",
+        "light": "#9B5F00",
+        "darkRef": "amber/600",
+        "lightRef": "amber/600",
+        "description": ""
+      },
+      {
+        "name": "color/fill/warning/subtle",
+        "group": "fill",
+        "dark": "#371F00",
+        "light": "#FFF3E7",
+        "darkRef": "amber/950",
+        "lightRef": "amber/50",
+        "description": ""
+      },
+      {
+        "name": "color/fill/danger/default",
+        "group": "fill",
+        "dark": "#C03809",
+        "light": "#C03809",
+        "darkRef": "red/600",
+        "lightRef": "red/600",
+        "description": ""
+      },
+      {
+        "name": "color/fill/danger/subtle",
+        "group": "fill",
+        "dark": "#470E00",
+        "light": "#FFF2EE",
+        "darkRef": "red/950",
+        "lightRef": "red/50",
+        "description": ""
+      },
+      {
+        "name": "color/fill/info/default",
+        "group": "fill",
+        "dark": "#417297",
+        "light": "#417297",
+        "darkRef": "steel/600",
+        "lightRef": "steel/600",
+        "description": ""
+      },
+      {
+        "name": "color/fill/info/subtle",
+        "group": "fill",
+        "dark": "#0F283A",
+        "light": "#EDF7FF",
+        "darkRef": "steel/950",
+        "lightRef": "steel/50",
+        "description": ""
+      },
+      {
+        "name": "color/fill/disabled",
+        "group": "fill",
+        "dark": "#FFFFFF0D",
+        "light": "#F0F1F2",
+        "darkRef": "alpha/white/5",
+        "lightRef": "midnight/50",
+        "description": ""
+      },
+      {
+        "name": "color/overlay/state/hover",
+        "group": "overlay",
+        "dark": "#FFFFFF0D",
+        "light": "#05141F0D",
+        "darkRef": "alpha/white/5",
+        "lightRef": "alpha/midnight/5",
+        "description": ""
+      },
+      {
+        "name": "color/overlay/state/pressed",
+        "group": "overlay",
+        "dark": "#FFFFFF1A",
+        "light": "#05141F1A",
+        "darkRef": "alpha/white/10",
+        "lightRef": "alpha/midnight/10",
+        "description": ""
+      },
+      {
+        "name": "color/overlay/state/selected",
+        "group": "overlay",
+        "dark": "#5D7D2B33",
+        "light": "#5D7D2B1A",
+        "darkRef": "alpha/forest/20",
+        "lightRef": "alpha/forest/10",
+        "description": ""
+      },
+      {
+        "name": "color/overlay/on-fill/activated",
+        "group": "overlay",
+        "dark": "#FFFFFF26",
+        "light": "#05141F33",
+        "darkRef": "alpha/white/15",
+        "lightRef": "alpha/midnight/20",
+        "description": ""
+      },
+      {
+        "name": "color/elevation/raised/shadow-near",
+        "group": "elevation",
+        "dark": "#00000040",
+        "light": "#05141F1A",
+        "darkRef": "alpha/black/25",
+        "lightRef": "alpha/midnight/10",
+        "description": "Sombra de contacto. Pega la tarjeta a la superficie y comunica que se puede presionar."
+      },
+      {
+        "name": "color/elevation/raised/shadow-far",
+        "group": "elevation",
+        "dark": "#00000066",
+        "light": "#05141F33",
+        "darkRef": "alpha/black/40",
+        "lightRef": "alpha/midnight/20",
+        "description": "Sombra ambiental. Hace flotar la tarjeta. Antes: midnight/10 · black/35"
+      },
+      {
+        "name": "color/elevation/raised/inner-top",
+        "group": "elevation",
+        "dark": "#FFFFFF4C",
+        "light": "#FFFFFF4C",
+        "darkRef": "alpha/white/30",
+        "lightRef": "alpha/white/30",
+        "description": "Línea de luz en el canto superior."
+      },
+      {
+        "name": "color/elevation/raised/inner-bottom",
+        "group": "elevation",
+        "dark": "#00000040",
+        "light": "#05141F0D",
+        "darkRef": "alpha/black/25",
+        "lightRef": "alpha/midnight/5",
+        "description": "Sombra interior en la base: da volumen convexo. Antes: white/5"
+      },
+      {
+        "name": "color/elevation/overlay/shadow-near",
+        "group": "elevation",
+        "dark": "#00000040",
+        "light": "#05141F1A",
+        "darkRef": "alpha/black/25",
+        "lightRef": "alpha/midnight/10",
+        "description": "Sombra cercana de modales, hojas y menús."
+      },
+      {
+        "name": "color/elevation/overlay/shadow-far",
+        "group": "elevation",
+        "dark": "#00000066",
+        "light": "#05141F33",
+        "darkRef": "alpha/black/40",
+        "lightRef": "alpha/midnight/20",
+        "description": "Sombra lejana: separa la capa flotante de todo lo de atrás."
+      },
+      {
+        "name": "color/elevation/overlay/inner-top",
+        "group": "elevation",
+        "dark": "#FFFFFF1A",
+        "light": "#FFFFFF1A",
+        "darkRef": "alpha/white/10",
+        "lightRef": "alpha/white/10",
+        "description": "Línea de luz en el canto superior de lo que flota."
+      },
+      {
+        "name": "color/elevation/panel/shadow-near",
+        "group": "elevation",
+        "dark": "#00000026",
+        "light": "#05141F0D",
+        "darkRef": "alpha/black/15",
+        "lightRef": "alpha/midnight/5",
+        "description": "Sombra media difusa. Sin sombra de contacto: el panel no se presiona."
+      },
+      {
+        "name": "color/elevation/panel/shadow-far",
+        "group": "elevation",
+        "dark": "#00000066",
+        "light": "#05141F33",
+        "darkRef": "alpha/black/40",
+        "lightRef": "alpha/midnight/20",
+        "description": "Sombra ambiental amplia: más altura que raised."
+      },
+      {
+        "name": "color/elevation/panel/inner-top",
+        "group": "elevation",
+        "dark": "#FFFFFF1A",
+        "light": "#FFFFFF99",
+        "darkRef": "alpha/white/10",
+        "lightRef": "alpha/white/60",
+        "description": "Luz uniforme y tenue en el canto superior, sin brillo especular."
+      },
+      {
+        "name": "color/material/glass/raised/tint-top",
+        "group": "material",
+        "dark": "#FFFFFF26",
+        "light": "#FFFFFFCC",
+        "darkRef": "alpha/white/15",
+        "lightRef": "alpha/white/80",
+        "description": "Inicio del degradado vertical del vidrio tocable (luz desde arriba). Neutro: el tinte verde queda solo para botones glass."
+      },
+      {
+        "name": "color/material/glass/raised/tint-bottom",
+        "group": "material",
+        "dark": "#05141F33",
+        "light": "#FFFFFF99",
+        "darkRef": "alpha/midnight/20",
+        "lightRef": "alpha/white/60",
+        "description": "Final del degradado: más oscuro abajo para dar volumen."
+      },
+      {
+        "name": "color/material/glass/raised/edge-highlight",
+        "group": "material",
+        "dark": "#FFFFFF99",
+        "light": "#FFFFFF",
+        "darkRef": "alpha/white/60",
+        "lightRef": "static/white",
+        "description": "Borde especular: esquina iluminada (arriba izquierda)."
+      },
+      {
+        "name": "color/material/glass/raised/edge-mid",
+        "group": "material",
+        "dark": "#FFFFFF0D",
+        "light": "#FFFFFF4C",
+        "darkRef": "alpha/white/5",
+        "lightRef": "alpha/white/30",
+        "description": "Borde especular: tramo central casi invisible."
+      },
+      {
+        "name": "color/material/glass/raised/edge-reflect",
+        "group": "material",
+        "dark": "#FFFFFF26",
+        "light": "#FFFFFF99",
+        "darkRef": "alpha/white/15",
+        "lightRef": "alpha/white/60",
+        "description": "Borde especular: reflejo en la esquina opuesta."
+      },
+      {
+        "name": "color/material/glass/panel/fill",
+        "group": "material",
+        "dark": "#FFFFFF1A",
+        "light": "#FFFFFFCC",
+        "darkRef": "alpha/white/10",
+        "lightRef": "alpha/white/80",
+        "description": "Relleno plano del panel: mismo valor que `color/surface/glass`. Sin degradado, no sugiere volumen presionable."
+      },
+      {
+        "name": "color/material/glass/panel/border",
+        "group": "material",
+        "dark": "#FFFFFF1A",
+        "light": "#05141F1A",
+        "darkRef": "alpha/white/10",
+        "lightRef": "alpha/midnight/10",
+        "description": "Borde uniforme del panel, sin brillo direccional."
+      }
+    ]
+  },
+  "spacing": {
+    "scale": [
+      {
+        "name": "space/scale/0",
+        "value": 0
+      },
+      {
+        "name": "space/scale/2",
+        "value": 2
+      },
+      {
+        "name": "space/scale/4",
+        "value": 4
+      },
+      {
+        "name": "space/scale/8",
+        "value": 8
+      },
+      {
+        "name": "space/scale/12",
+        "value": 12
+      },
+      {
+        "name": "space/scale/16",
+        "value": 16
+      },
+      {
+        "name": "space/scale/20",
+        "value": 20
+      },
+      {
+        "name": "space/scale/24",
+        "value": 24
+      },
+      {
+        "name": "space/scale/32",
+        "value": 32
+      },
+      {
+        "name": "space/scale/40",
+        "value": 40
+      },
+      {
+        "name": "space/scale/48",
+        "value": 48
+      },
+      {
+        "name": "space/scale/64",
+        "value": 64
+      },
+      {
+        "name": "space/scale/72",
+        "value": 72
+      },
+      {
+        "name": "space/scale/80",
+        "value": 80
+      },
+      {
+        "name": "space/scale/96",
+        "value": 96
+      }
+    ],
+    "roles": {
+      "inset": [
+        {
+          "name": "space/inset/xs",
+          "key": "xs",
+          "compact": 4,
+          "regular": 4,
+          "expanded": 8
+        },
+        {
+          "name": "space/inset/sm",
+          "key": "sm",
+          "compact": 8,
+          "regular": 8,
+          "expanded": 12
+        },
+        {
+          "name": "space/inset/md",
+          "key": "md",
+          "compact": 12,
+          "regular": 16,
+          "expanded": 16
+        },
+        {
+          "name": "space/inset/lg",
+          "key": "lg",
+          "compact": 16,
+          "regular": 24,
+          "expanded": 24
+        },
+        {
+          "name": "space/inset/xl",
+          "key": "xl",
+          "compact": 24,
+          "regular": 32,
+          "expanded": 40
+        },
+        {
+          "name": "space/inset/2xl",
+          "key": "2xl",
+          "compact": 32,
+          "regular": 40,
+          "expanded": 48
+        },
+        {
+          "name": "space/inset/3xl",
+          "key": "3xl",
+          "compact": 48,
+          "regular": 48,
+          "expanded": 48
+        }
+      ],
+      "stack": [
+        {
+          "name": "space/stack/xs",
+          "key": "xs",
+          "compact": 4,
+          "regular": 4,
+          "expanded": 4
+        },
+        {
+          "name": "space/stack/sm",
+          "key": "sm",
+          "compact": 8,
+          "regular": 8,
+          "expanded": 8
+        },
+        {
+          "name": "space/stack/md",
+          "key": "md",
+          "compact": 12,
+          "regular": 16,
+          "expanded": 16
+        },
+        {
+          "name": "space/stack/lg",
+          "key": "lg",
+          "compact": 16,
+          "regular": 24,
+          "expanded": 24
+        },
+        {
+          "name": "space/stack/xl",
+          "key": "xl",
+          "compact": 24,
+          "regular": 32,
+          "expanded": 40
+        },
+        {
+          "name": "space/stack/2xl",
+          "key": "2xl",
+          "compact": 32,
+          "regular": 48,
+          "expanded": 64
+        }
+      ],
+      "inline": [
+        {
+          "name": "space/inline/xs",
+          "key": "xs",
+          "compact": 4,
+          "regular": 4,
+          "expanded": 4
+        },
+        {
+          "name": "space/inline/sm",
+          "key": "sm",
+          "compact": 8,
+          "regular": 8,
+          "expanded": 8
+        },
+        {
+          "name": "space/inline/md",
+          "key": "md",
+          "compact": 12,
+          "regular": 12,
+          "expanded": 16
+        },
+        {
+          "name": "space/inline/lg",
+          "key": "lg",
+          "compact": 16,
+          "regular": 16,
+          "expanded": 24
+        },
+        {
+          "name": "space/inline/xl",
+          "key": "xl",
+          "compact": 24,
+          "regular": 24,
+          "expanded": 32
+        },
+        {
+          "name": "space/inline/2xl",
+          "key": "2xl",
+          "compact": 32,
+          "regular": 32,
+          "expanded": 40
+        }
+      ],
+      "gutter": [
+        {
+          "name": "space/gutter/sm",
+          "key": "sm",
+          "compact": 8,
+          "regular": 12,
+          "expanded": 16
+        },
+        {
+          "name": "space/gutter/md",
+          "key": "md",
+          "compact": 16,
+          "regular": 24,
+          "expanded": 24
+        },
+        {
+          "name": "space/gutter/lg",
+          "key": "lg",
+          "compact": 24,
+          "regular": 32,
+          "expanded": 40
+        }
+      ],
+      "doc": [
+        {
+          "name": "space/doc/xl",
+          "key": "xl",
+          "compact": 72,
+          "regular": 72,
+          "expanded": 72
+        }
+      ]
+    }
+  },
+  "typography": {
+    "family": {
+      "text": "Kia Signature",
+      "display": "Kia Signature",
+      "mono": "IBM Plex Mono"
+    },
+    "weight": {
+      "Light": "300",
+      "Regular": "400",
+      "Bold": "600"
+    },
+    "size": {
+      "display/lg": 32,
+      "heading/lg": 24,
+      "heading/md": 20,
+      "heading/sm": 18,
+      "body/lg": 16,
+      "body/md": 14,
+      "body/sm": 12,
+      "caption/sm": 10,
+      "overline": 10,
+      "amount/hero": 32,
+      "amount/lg": 24,
+      "amount/md": 16,
+      "amount/sm": 14,
+      "unit/md": 14,
+      "unit/sm": 12,
+      "otp": 24,
+      "code/md": 16,
+      "code/sm": 14,
+      "code/xs": 12
+    },
+    "lineHeight": {
+      "16": 16,
+      "20": 20,
+      "24": 24,
+      "28": 28,
+      "32": 32,
+      "40": 40
+    },
+    "letterSpacing": {
+      "tight": -2,
+      "snug": -1,
+      "none": 0,
+      "loose": 1.5,
+      "wide": 8
+    },
+    "styles": [
+      {
+        "name": "text/display/lg",
+        "family": "display",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 32,
+        "lineHeight": 40,
+        "tracking": -2,
+        "upper": false,
+        "description": "Contadores y KPIs grandes"
+      },
+      {
+        "name": "text/display/lg-light",
+        "family": "display",
+        "fontFamily": "Kia Signature",
+        "weight": "300",
+        "size": 32,
+        "lineHeight": 40,
+        "tracking": -2,
+        "upper": false,
+        "description": "Nombre del modelo, % batería, saludo hero"
+      },
+      {
+        "name": "text/heading/lg",
+        "family": "display",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 24,
+        "lineHeight": 32,
+        "tracking": -1,
+        "upper": false,
+        "description": "Títulos de pantalla y modales"
+      },
+      {
+        "name": "text/heading/lg-light",
+        "family": "display",
+        "fontFamily": "Kia Signature",
+        "weight": "300",
+        "size": 24,
+        "lineHeight": 32,
+        "tracking": -1,
+        "upper": false,
+        "description": "Saludo o hero secundario"
+      },
+      {
+        "name": "text/heading/md",
+        "family": "display",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 20,
+        "lineHeight": 28,
+        "tracking": -1,
+        "upper": false,
+        "description": "Títulos de sección"
+      },
+      {
+        "name": "text/heading/sm",
+        "family": "display",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 18,
+        "lineHeight": 24,
+        "tracking": -1,
+        "upper": false,
+        "description": "Títulos de tarjeta y cabecera"
+      },
+      {
+        "name": "text/body/lg/default",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "400",
+        "size": 16,
+        "lineHeight": 24,
+        "tracking": 0,
+        "upper": false,
+        "description": "Datos principales, inputs"
+      },
+      {
+        "name": "text/body/lg/strong",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 16,
+        "lineHeight": 24,
+        "tracking": 0,
+        "upper": false,
+        "description": "Botones, valor destacado"
+      },
+      {
+        "name": "text/body/md/default",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "400",
+        "size": 14,
+        "lineHeight": 20,
+        "tracking": 0,
+        "upper": false,
+        "description": "Texto base y descripciones"
+      },
+      {
+        "name": "text/body/md/strong",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 14,
+        "lineHeight": 20,
+        "tracking": 0,
+        "upper": false,
+        "description": "Énfasis en cuerpo, valor destacado en fila"
+      },
+      {
+        "name": "text/body/sm/default",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "400",
+        "size": 12,
+        "lineHeight": 16,
+        "tracking": 0,
+        "upper": false,
+        "description": "Metadatos, filas de detalle, precios en lista"
+      },
+      {
+        "name": "text/body/sm/strong",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 12,
+        "lineHeight": 16,
+        "tracking": 0,
+        "upper": false,
+        "description": "Dato destacado en fila"
+      },
+      {
+        "name": "text/caption/sm/default",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "400",
+        "size": 10,
+        "lineHeight": 16,
+        "tracking": 1.5,
+        "upper": false,
+        "description": "Etiquetas de campo, tab bar inactiva"
+      },
+      {
+        "name": "text/caption/sm/strong",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 10,
+        "lineHeight": 16,
+        "tracking": 1.5,
+        "upper": false,
+        "description": "Tab bar activa, ayuda destacada"
+      },
+      {
+        "name": "text/overline/default",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 10,
+        "lineHeight": 16,
+        "tracking": 8,
+        "upper": true,
+        "description": "Antetítulo en mayúsculas"
+      },
+      {
+        "name": "text/amount/hero",
+        "family": "display",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 32,
+        "lineHeight": 40,
+        "tracking": -2,
+        "upper": false,
+        "description": "Presión del neumático en la tarjeta del vehículo"
+      },
+      {
+        "name": "text/amount/lg",
+        "family": "display",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 24,
+        "lineHeight": 32,
+        "tracking": -1,
+        "upper": false,
+        "description": "Presión por rueda"
+      },
+      {
+        "name": "text/amount/md",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "400",
+        "size": 16,
+        "lineHeight": 24,
+        "tracking": 0,
+        "upper": false,
+        "description": "Cifra en fila o ficha"
+      },
+      {
+        "name": "text/amount/sm",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "400",
+        "size": 14,
+        "lineHeight": 20,
+        "tracking": 0,
+        "upper": false,
+        "description": "Cifra en lista"
+      },
+      {
+        "name": "text/unit/md",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 14,
+        "lineHeight": 20,
+        "tracking": 0,
+        "upper": false,
+        "description": "Unidad junto a amount hero y lg"
+      },
+      {
+        "name": "text/unit/sm",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 12,
+        "lineHeight": 16,
+        "tracking": 0,
+        "upper": false,
+        "description": "Unidad junto a amount md y sm"
+      },
+      {
+        "name": "text/otp/default",
+        "family": "text",
+        "fontFamily": "Kia Signature",
+        "weight": "600",
+        "size": 24,
+        "lineHeight": 32,
+        "tracking": 8,
+        "upper": false,
+        "description": "Clave de un solo uso, un dígito por caja"
+      },
+      {
+        "name": "text/code/md",
+        "family": "mono",
+        "fontFamily": "IBM Plex Mono",
+        "weight": "400",
+        "size": 16,
+        "lineHeight": 24,
+        "tracking": 0,
+        "upper": false,
+        "description": "Código e identificadores (VIN)"
+      },
+      {
+        "name": "text/code/sm",
+        "family": "mono",
+        "fontFamily": "IBM Plex Mono",
+        "weight": "400",
+        "size": 14,
+        "lineHeight": 20,
+        "tracking": 0,
+        "upper": false,
+        "description": "Código en fila"
+      },
+      {
+        "name": "text/code/xs",
+        "family": "mono",
+        "fontFamily": "IBM Plex Mono",
+        "weight": "400",
+        "size": 12,
+        "lineHeight": 16,
+        "tracking": 0,
+        "upper": false,
+        "description": "Código en metadatos"
+      }
+    ]
+  }
+}
