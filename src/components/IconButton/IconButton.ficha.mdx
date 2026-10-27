@@ -1,0 +1,160 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Fichas/IconButton" />
+
+# Ficha · IconButton
+
+> Ficha de trabajo del componente: inventario, brief de decisiones y notas abiertas. El contrato vigente está en la documentación del componente (`Components/IconButton`).
+
+- **Página en Figma:** IconButton (frames «IconButton» `5:18328` y «IconButton · Dev» `5:18877`) en KIA Core Componentes (`rVdetvqgPFzRluJ86eTEju`)
+- **Component set:** `5:18348` · 160 variantes (140 de origen + 20 glass) · ejes: `appearance` (8) × `size` (4) × `state` (5) · 0 component properties propias (la instancia Icon anidada está expuesta)
+- **Contrato:** `components/kia-iconbutton-component.md`
+- **Código:** `src/components/IconButton/`
+- **Estado:** ☑ F0  ◐ F1 (brief sin acordar)  ☑ F2  ◐ F3 (neutral, veil, on-* y xs sin token Kia)  ☑ F4  ◐ F5 (web verificado; dispositivo y links de Figma pendientes)
+- **Última actualización:** 2026-10-26
+
+**Pedido que arranca esta ficha:** el IconButton de Kia necesita un efecto más **glass**, como el de Button, y tiene que **apuntar a un icono de la librería de Kia** (KIA Icons / `Icon`).
+
+---
+
+## F0 · Inventario inicial
+
+Corrido el 2026-10-26 contra la página `IconButton` (script de la guía, hijos de instancias excluidos).
+
+```
+remote (instancias cuyo main es remoto):
+  Icon / size=lg                                   35   ← dentro de las 140 variantes
+  Icon / size=md                                   35
+  Icon / size=sm                                   70   (xs y sm usan 16)
+  docs/header                                       2   (diseño y Dev)
+  docs/practice-label / type=do                     3
+  docs/practice-label / type=dont                   3
+  Button / variant=primary, appearance=fill, …      1   (instancia "example" en buenas prácticas)
+
+vars — colecciones ajenas a FoundatiosKia (todas):
+  3. Semantic · 4. Layout · 5. Platform
+  Resumen por familia:
+  · component/iconbutton/*  (≈ 30 tokens): brand · neutral · ghost · veil · on-scene · on-media · on-inverse
+      (bg-default/hover/pressed/disabled, border-disabled, focus/border, focus/border-on-scene|on-media|on-inverse)
+  · size/control/height/{xs,sm,md,lg} (70+80+70+70) · size/icon/{sm,md,lg} · radius/action/icon (692) · radius/action (4)
+  · focus/ring/spread (112) · border/width/default (32)
+  · documentación: color/canvas/* , color/text/{primary,secondary,tertiary,brand}, color/border/divider/subtle,
+      space/doc/*, space/inset|inline|stack|gutter/*, radius/surface/*, radius/pill, font/size/{body,label,heading,code,overline},
+      platform/font/style/{regular,emphasis}, font/family/{text,mono}, font/weight/medium
+  · component/button/primary/bg-default (1) · size/control/min-width (1) — vienen de la instancia de Button
+
+styles (text styles, todos del sistema anterior):
+  text/body/sm/default 104 · text/label/sm/strong 81 · text/label/md/strong 19 ·
+  text/overline/default 18 · text/heading/sm 14 · text/code/sm 15
+
+links (14, todos a otro archivo):
+  https://www.figma.com/design/DOUsaQf0fK7hybeS0n74gb?node-id=78-7157 … 1018-87691
+  (archivo de origen DOUsaQf0fK7hybeS0n74gb; 14 enlaces del índice y del header)
+```
+
+**Lectura**
+- **Tokens:** hay que migrar `3. Semantic`, `4. Layout`, `5. Platform` completas. Los `component/iconbutton/*` son los más trabajosos: hay que decidir cuáles sobreviven (ver F1).
+- **Instancias remotas:** los `Icon` anidados son remotos (esperado, pero **falta confirmar con el `key` del main que vienen de KIA Icons**: keys `56c6417c…` lg, `65e382a1…` md, `6d3238fe…` sm). Las de Button y las de `docs/*` se reemplazan por locales.
+- **Links:** los 14 apuntan al archivo de origen; hay que rehacerlos hacia KIA Core Componentes y el Storybook de Kia.
+- **Las 140 variantes ya son 7 × 4 × 5**, pero el tamaño del icono va bindeado en la instancia anidada (no en el main) — trampa documentada en el frame.
+- **Frame de diseño:** 6 secciones (matriz, ejes, propiedades, cuándo usar cada appearance, antes de usarlo, buenas prácticas con 3 pares). **Frame Dev:** 8 secciones, con firma `icon: IconName`… pero la tabla de props dice `icon: ReactNode` (contradicción a cerrar).
+- Menciona **«Jetto»**, **«CHG con vía RFC»** y `color/bg/*`, `color/icon/*`, `color/border/focus/on-inverse` (nombres de otro sistema).
+
+Lo que ya está medido en el set (default, `brand`): lg 56 · md 44 · sm 32 · xs 24, radio 9999 (`radius/action/icon`), icono 32/24/16/16, sin strokes salvo foco/disabled, sin efectos (ningún blur ni sombra). Veil = alpha 6 %, on-media = alpha 48 % negro.
+
+## F1 · Brief de decisiones (propuesta — nada acordado todavía)
+
+> Marco ✅ lo acordado y ➡️ lo aplicado. Hoy todo está en «propuesta».
+
+**Identidad y alcance**
+- Qué resuelve y cuándo no se usa: la misma acción que Button pero sin etiqueta; solo cuando el glifo es inequívoco o no hay espacio (cerrar, volver, más opciones). Si hay duda de qué hace → Button con label. Cerca: **Button** (con texto) y **LinkButton**.
+- Dónde vive / quién lo anida: suelto (barras, tarjetas, fotos) y dentro de otros controles (Snackbar, Alert, campos). Los contenedores lo anidan, él no anida más que un `Icon`.
+- Qué trae del otro sistema que no aplica: nombres «Jetto», «CHG con vía RFC», `color/bg/*` · `color/icon/*`, tokens `component/iconbutton/*` del otro árbol, la apariencia **neutral con tokens provisionales** (deuda conocida), y el hecho de que `on-inverse` solo existe por el Snackbar.
+
+**Variantes y propiedades**
+- Ejes y valores: **propuesta** — añadir `appearance=glass` (es el pedido) como cuerpo «de vidrio» del IconButton: mismo recipe que `Button · primary · glass`. Decidir qué pasa con las demás:
+  - Opción A (recomendada, como Button): `brand · glass · ghost · on-scene · on-media`. `glass` ocupa el lugar de `veil` y `neutral`; se quitan `neutral` (deuda y tokens provisionales) y `veil` (el vidrio ya da silueta), y `on-inverse` si el Snackbar no lo necesita.
+  - Opción B: mantener las 7 y sumar `glass` (8 × 4 × 5 = 160 variantes). Más tokens, más superficie que mantener.
+- Orden de ejes y valores: `appearance` de más a menos peso (brand · glass · …), `size` lg·md·sm·xs, `state` default·hover·pressed·focus·disabled — igual que Button. Etiquetas de la matriz en el mismo orden.
+- Defaults: `appearance=brand`, `size=lg` en Figma (la firma de código dice `md` → **alinear**: en Button el default de código es md; confirmar), `state=default`.
+- Divergencias: `label` (a11y, obligatoria), `onPress`, `disabled` (boolean ↔ `state=disabled`), `style`, `testID`. **`icon` deja de ser `ReactNode`**: es `IconName` (catálogo de 50 iconos de KIA Icons que ya expone `Icon`). En Figma `icon` debe ser una **component property INSTANCE_SWAP** del set (hoy hay que entrar a la instancia anidada).
+
+**Medidas y tokens**
+- Medidas sin token: ya salen de `size/control/height/*`, `size/icon/*`, `radius/action/icon`. Falta confirmar que `radius/action/icon` existe en FoundatiosKia (el Button usa `radius/action` y `radius/focus/action`, pendientes de publicar).
+- Valores fuera de escala Kia: el icono no escala 1:1 (xs/sm 16, md 24, lg 32). Aceptar tal cual; es regla, no desvío. xs (24) no tiene altura equivalente en Button (sm/md/lg): **decidir si xs sobrevive** o si se alinea a 3 tallas como Button.
+- Tokens de componente a crear: para `glass`, **reutilizar** los de Button en vez de duplicar — `color/fill/action/primary/glass/default` → `…/glass/gradient-end`, `color/border/action/primary/glass/default`, `color/text/action/primary/glass/default` (glifo), `elevation/raised/glass-blur` (20), `color/elevation/raised/shadow-near` (`near-y` 2, `near-blur` 4), `color/elevation/raised/inner-top` (`inner-top-y` 1, `inner-top-blur` 1), `color/overlay/state/pressed`. Solo hace falta un `component/iconbutton/…` si el glifo necesita un color distinto al del texto del botón (probablemente no).
+- Cambios de tamaño por tipografía Kia: no aplica (no tiene texto).
+
+**Comportamiento y plataforma**
+- Movimiento: ninguno propio; el cambio de estado es instantáneo (confirmar con Design Lead si pressed lleva transición).
+- Accesibilidad: `accessibilityRole="button"`, `accessibilityLabel={label}` obligatorio, `accessibilityState={{ disabled }}`; el `Icon` interno decorativo: `importantForAccessibility="no-hide-descendants"`. Web: `aria-label`. Hover solo web. Áreas: xs 24 y sm 32 por debajo de `size/target/min` (48) → `hitSlop` en código (como Button).
+- Archivos: **dividir por extensión solo la capa de vidrio**, reutilizando `GlassLayer.tsx` / `GlassLayer.web.tsx` y `useButtonRadius` de Button (en vez de copiarlos, moverlos a un módulo compartido). Sin dependencias nuevas; el blur nativo sigue siendo la decisión abierta #3 de Button (`expo-blur`).
+- Estados y quién los resuelve: default · hover (web) · pressed · focus · disabled los resuelve el propio control. Disabled en glass: degradado → `color/fill/disabled` plano + blur + borde `color/border/subtle` (igual que Button).
+
+**Propiedades anidadas** (Icon)
+- `name` → **público** (`icon`), vía INSTANCE_SWAP. `size` → **derivado** del `size` del IconButton (xs/sm→`sm`, md→`md`, lg→`lg`). `color` → **derivado** de appearance + state (no se expone). Nada fijo.
+
+**Decisiones acordadas con:** — · —
+
+**Reajustes aplicados en el component set**
+| Qué cambió | Por qué | ➡️ |
+|---|---|---|
+| Añadido `appearance=glass` × 4 tallas × 5 estados (20 variantes → set de 160), copiando de `Button KIA` degradado, borde, blur, sombra y brillo con sus ataduras; glifo atado a `color/text/action/primary/glass/default` (disabled: `color/text/disabled`). Hover = default + `overlay/state/pressed` al 50 % (Button no tiene hover). Modo `Semantic=dark` fijado en las variantes glass y en su fondo `docs/glass-scene` (los tokens de glass están pensados para dark) | Pedido: efecto más glass como en los botones | ➡️ 2026-10-26 (sin acordar) |
+| Expuesta la instancia `Icon` anidada (`isExposedInstance`) en las 160 variantes: el panel de IconButton ya muestra el selector `icon` de KIA Icons (33 preferidos) sin entrar a la instancia. Ojo: también deja visible `size` del Icon, que es derivado | Que apunte a un icono de la librería de Kia | ➡️ 2026-10-26 |
+| (propuesto) decidir y aplicar qué apariencias salen (neutral · veil · on-inverse) | Alinear con Button y reducir tokens | ☐ |
+| (propuesto) eliminar texto «Jetto/CHG» y la deuda de neutral en frames | Nombres de otro sistema | ☐ |
+
+## F2 · Referencias
+
+- [ ] `docs/header` y `docs/label` locales (hoy `docs/header` y `docs/practice-label` son remotos)
+- [ ] Instancias remotas reemplazadas: `Button · primary · fill · md` (→ `Button KIA` local, `5:16185`), `docs/*`
+- [ ] Confirmar origen de los `Icon` anidados (keys `56c6417c…`, `65e382a1…`, `6d3238fe…` contra KIA Icons)
+- [ ] Links de índice a nodos del archivo (hoy los 14 van a `DOUsaQf0fK7hybeS0n74gb`)
+- [ ] Links de Storybook (`components-iconbutton--docs` y `--playground`)
+
+## F3 · Tokens
+
+**Mapa viejo → Kia** (propuesto; verificar uso antes de aplicar)
+| Antes | Ahora | Nota |
+|---|---|---|
+| `component/iconbutton/brand/bg-default·hover·pressed·disabled` | `color/fill/action/primary/default` · `…/pressed` · `color/fill/disabled` | hover: no hay token de hover en Button; revisar |
+| `component/iconbutton/focus/border` | `color/border/focus` | |
+| `component/iconbutton/on-scene|on-media|veil/*` | por decidir (F1) | on-media: velo negro 48 % sin equivalente conocido |
+| `color/canvas/*`, `color/text/*`, `color/border/divider/subtle`, `font/*` | tabla de la guía §3.1 | frames de documentación |
+| `radius/action/icon`, `radius/action` | confirmar en FoundatiosKia (pendiente de publicar) | |
+| `focus/ring/spread` | `border/width/focus` (2) | |
+
+**Tokens creados en FoundatiosKia** (publicados ☐ · importados ☐ · `codeSyntax` ☐): ninguno aún. Previsto: ninguno para glass (se reutilizan los de Button).
+
+- [ ] `foundations/` re-exportado y `npm run tokens` revisado
+- [ ] Inventario final sin colecciones ajenas
+
+## F4 · Documentación
+
+- [ ] Frame de diseño revisado (matriz con `glass`, etiquetas en el orden de las variantes, sin «Jetto»)
+- [ ] Frame Dev contra el código, fila por fila (arreglar `icon: IconName` vs `ReactNode`, default de `size`)
+- [ ] `components/kia-iconbutton-component.md` creado (plantilla: `kia-button-component.md`)
+
+## F5 · Código y Storybook
+
+- [ ] `IconButton.tsx` (usa `Icon`, `GlassLayer` compartido)
+- [ ] Stories (`Playground`, `Matrix`, `Glass`, `OnMedia`…) + `.mdx`
+- [ ] `npm run typecheck` · `npm run build-storybook`
+- [ ] Stories vistas en web, temas y densidades
+- [ ] Links de Figma comprobados (tras publicar)
+- [ ] Dispositivo / simulador: pendiente
+
+## Notas y decisiones abiertas
+
+1. **¿Opción A o B para las apariencias?** (qué pasa con neutral, veil, on-inverse). Design Lead.
+2. **¿xs (24) se queda?** Button tiene 3 tallas; IconButton tiene 4.
+3. **Default de `size`:** Figma `lg`, código `md`. Unificar.
+4. **Blur nativo del glass** depende de la decisión de `expo-blur` (Button #3).
+5. **Mover `GlassLayer` y `useButtonRadius` a un módulo compartido** antes de usarlos desde IconButton (hoy viven en `src/components/Button/`, sin commitear). Tech Lead.
+6. Hay cambios sin commitear en Button (glass, tokens de radius): IconButton depende de ellos; conviene commitear Button primero.
+7. Confirmar si el Snackbar sigue necesitando `on-inverse` y si Alert/Snackbar usan `veil` (la X de cerrar), antes de quitar apariencias.
+
+8. **Pendiente en la página tras añadir glass:** tarjeta de `glass` en la sección 04 «Cuándo usar cada appearance» (solo se actualizaron los contadores y la lista de ejes), y revisar con Design Lead si el glass sobre fondo plano necesita una escena con contenido detrás para que se note el blur.
+9. Las variantes `glass` usan `Semantic=dark` fijo; el resto del archivo sigue en el modo de la página.
+10. **F3 parcial (2026-10-26):** `brand`, `ghost` y `glass` ya van con tokens de Kia (relleno, glifo, disabled, anillo de foco, `size/control/height/{lg,md,sm}`); la matriz usa `color/surface/base`, `Semantic=dark` y el escenario de glow del Button. **Siguen con el otro sistema:** `neutral`, `veil`, `on-scene`, `on-media`, `on-inverse` (sin equivalente Kia), `size/control/height/xs` (Kia no tiene xs), `radius/action/icon` (círculo; Button usa `radius/action`), y todo el kit de documentación (textos, estilos, links). Hover de brand/ghost/glass es provisional (default + overlay al 50 %).
+11. **2026-10-26 · círculo confirmado, docs y Storybook hechos.** Radio = `radius/pill` (foco `radius/focus/pill`), importados de FoundatiosKia. Frames migrados: `docs/header` y `docs/practice-label` → locales, `Button` de ejemplo → `Button KIA`, variables y text styles → Kia (332 paints, 553 campos, 253 estilos), textos reescritos sin «Jetto/CHG», tarjeta `glass` en la sección 04, índice y «Ver en Storybook» enlazados (Dev también muestra el botón). Código: `IconButton.tsx`, stories (Playground, Glass, Hierarchy, Matrix, Icons), `.mdx`; `GlassLayer` ganó `radius?`. Typecheck y build-storybook en verde; stories vistas en web sin errores de consola. **Queda con el otro sistema:** `neutral`, `veil`, `on-scene`, `on-media`, `on-inverse` (`component/iconbutton/*`), `size/control/height/xs`, `color/canvas/surface/inverse` del fondo `docs/inverse`, espacios `space/doc/sm|xl` sueltos, y `font/size/code/sm`. Hover y xs siguen en Figma, no en código.

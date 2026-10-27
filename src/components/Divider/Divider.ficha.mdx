@@ -1,0 +1,170 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Fichas/Divider" />
+
+# Ficha · Divider
+
+> Ficha de trabajo del componente: inventario, brief de decisiones y notas abiertas. El contrato vigente estará en la documentación del componente (`Components/Divider`) cuando exista.
+
+- **Página en Figma:** Divider (frames «Divider» `7:22474` y «Divider · Dev» `7:22596`) en KIA Core Componentes (`rVdetvqgPFzRluJ86eTEju`)
+- **Component set:** `7:22490` · 6 variantes · ejes: `orientation` (2: horizontal · vertical) × `appearance` (3: strong · default · subtle) · 0 component properties propias
+- **Contrato:** `components/kia-divider-component.md` (aún no existe)
+- **Código:** `src/components/Divider/` (aún no existe)
+- **Estado:** ☑ F0  ◐ F1 (brief sin acordar; reajustes del component set aplicados)  ☑ F2  ☑ F3  ☐ F4  ☐ F5
+- **Última actualización:** 2026-10-26
+
+**Pedido que arranca esta ficha:** hoy el divisor de los diseños de Kia es **blanco al 8 % de opacidad**. Hay que buscar en FoundatiosKia algo equivalente y, a partir de ahí, definir las versiones `subtle` y `strong`.
+
+---
+
+## F0 · Inventario inicial
+
+Corrido el 2026-10-26 contra la página `Divider` (script de la guía, hijos de instancias excluidos; 318 nodos propios).
+
+```
+remote (instancias cuyo main es remoto):
+  docs/header                                   2   (diseño y Dev)
+  docs/practice-label type=do                   2
+  docs/practice-label type=dont                 2
+  ListItem leadingContent=none, size=sm, state=default   6   (ejemplos de buenas prácticas)
+
+vars — colecciones ajenas a FoundatiosKia (todas): 3. Semantic · 4. Layout · 5. Platform
+  · componente: component/divider/line/{strong 3 · default 1 · subtle 4} · border/width/divider 11
+  · documentación: color/canvas/surface/{primary 13, brand 20} · color/canvas/background/page 12 ·
+      color/text/{primary 21, secondary 45, tertiary 61, brand 8} · color/border/divider/subtle 29 ·
+      space/doc/{sm 14, xl 13, 2xl 6} · space/inset/{xs, sm, md, xl, 2xl} · space/inline/{lg, xl, 2xl} · space/stack/{md, xl} ·
+      radius/surface/{sm 48, md 24, lg 8} · radius/pill 72 ·
+      font/size/{body/sm 55, label/sm 39, label/md 8, heading/sm 12, code/sm 13, overline 8} · font/family/{text 122, mono 13} ·
+      font/weight/medium 13 · platform/font/style/{regular 55, emphasis 67} ·
+      platform/component/listitem/leading-gap 6 · size/target/min 6
+
+styles (text styles, todos del sistema anterior):
+  text/body/sm/default 55 · text/label/sm/strong 39 · text/heading/sm 12 · text/code/sm 13 ·
+  text/overline/default 8 · text/label/md/strong 8
+
+links (12, todos a otro archivo):
+  https://www.figma.com/design/DOUsaQf0fK7hybeS0n74gb?node-id=78-4935 … 1017-80494
+  (archivo de origen DOUsaQf0fK7hybeS0n74gb; índice y header de los dos frames)
+```
+
+**Lectura**
+- **Tokens:** hay que migrar `3. Semantic`, `4. Layout` y `5. Platform` completas. Los tres `component/divider/line/*` del otro árbol se reemplazan por los nuevos de Kia (ver F1 y F3).
+- **Instancias remotas:** `docs/header` y `docs/practice-label` se reemplazan por locales. El `ListItem` remoto no tiene todavía equivalente local en Core: confirmar si se usa un `ListItem` de Kia o se simplifica el ejemplo.
+- **Links:** los 12 apuntan al archivo de origen; hay que rehacerlos hacia KIA Core Componentes y el Storybook de Kia.
+- **Fill sin token:** la variante `horizontal · default` tenía el color pegado como hex (`#CED4E3`), sin variable. Las otras cinco sí estaban atadas, pero a variables del otro sistema.
+- **Default incoherente:** en Figma el default era `appearance=strong`; la firma del frame Dev dice `'default'`.
+- **Matriz y variantes en distinto orden:** el set va `strong · default · subtle`, pero las columnas de la matriz dicen `default · subtle · strong`.
+- **Frame Dev:** menciona «bDS», «Core components», «Jetto» y «CHG con vía RFC», `color/border/divider/*`, `color/border/input/default` (la descripción del set decía `color/border/control/default`: ninguno existe en Kia) y un «modo de alto contraste» con grosor 2 que Kia no tiene (`border/width/divider` vale 1 en light y dark).
+
+Lo ya medido en el set: horizontal 320 × 1, vertical 1 × 160 (largos de muestra), sin strokes, sin efectos, sin texto. El grosor iba atado a `border/width/divider` del otro sistema; la página corre en modo claro del otro archivo.
+
+## F1 · Brief de decisiones (propuesta — nada acordado todavía)
+
+> Marco ✅ lo acordado y ➡️ lo aplicado. Hoy todo está en «propuesta».
+
+**Identidad y alcance**
+- Qué resuelve y cuándo no se usa: una línea que dice «aquí termina un bloque» sin encerrarlo en una tarjeta. Es **decorativo**: no se toca, no recibe foco y no delimita controles (un campo usa `color/border/strong`). Si basta con aire entre bloques, no se pone. Cerca: **espacio** (`space/stack/*`), que casi siempre es mejor, y **Card**, que encierra en vez de separar.
+- Dónde vive / quién lo anida: suelto, entre bloques de una pantalla, lista, tarjeta, hoja o menú. Lo anidan contenedores (lista, tarjeta, bottom sheet); él no anida nada.
+- Qué trae del otro sistema que no aplica: «bDS», «Core components», «Jetto», «CHG con vía RFC», `color/border/divider/*` y `color/border/input|control/default` (no existen), el modo de alto contraste, los grises de la escala anterior y el `ListItem` remoto de los ejemplos.
+
+**Variantes y propiedades**
+- Ejes y valores: se quedan `orientation` (horizontal · vertical) y `appearance` (strong · default · subtle). Los tres pesos son útiles solo si hay regla de uso; propuesta: `strong` entre secciones de una pantalla, `default` entre bloques de una tarjeta o lista, `subtle` entre filas muy densas. Esa regla va en la sección «Cuándo usar cada appearance» de la página (hoy no existe: divergencia abierta de la página Dev).
+- Orden de ejes y valores: `appearance` de más a menos peso, **strong · default · subtle**, como en el set. Hay que reordenar las etiquetas de la matriz, que hoy dicen `default · subtle · strong`. En código la unión puede escribirse en el orden que se quiera: los valores son los mismos.
+- Defaults: `orientation=horizontal`, `appearance=default`. ➡️ En Figma el default era `strong`; ahora es `default`, igual que la firma de código.
+- Lo que el código necesita y Figma no puede expresar (divergencias): `decorative` (boolean, por defecto `true`: decide si se oculta al lector de pantalla o se expone como separador), `style` (márgenes y largo), `testID`. Largo y alto de las muestras (320 y 160) no son parte del componente: en uso, el horizontal llena el ancho y el vertical estira al alto del contenedor.
+
+**Medidas y tokens**
+- Medidas sin token (¿atar o crear?): grosor → atar a `border/width/divider` (existe en FoundatiosKia, vale 1). ➡️ Ya atado en alto (horizontal) y ancho (vertical) de las 6 variantes, importado de FoundatiosKia. El largo no lleva token.
+- Valores que no caen en la escala Kia: el **8 %** de los diseños no existe como alpha. Los alphas blancos de FoundatiosKia son 5 · 10 · 15 · 20 · 30 · 60 · 80. Propuesta: **default = 10 %** (`color/border/subtle`, ya es el «divisor dentro de una tarjeta» según la página de color), a 2 puntos del 8 % actual. No se crea un alpha nuevo para ganar 2 puntos.
+- Tokens de componente a crear (`component/<c>/<parte>/<estado>` → semantic light / dark):
+
+  | Token | dark | light | Referencia |
+  |---|---|---|---|
+  | `component/divider/line/subtle` | `alpha/white/5` | `alpha/midnight/5` | 5 %, la mitad de default |
+  | `component/divider/line/default` | `color/border/subtle` (white 10 %) | midnight 10 % | lo más parecido al 8 % actual |
+  | `component/divider/line/strong` | `color/border/default` (white 20 %) | midnight 20 % | el doble de default; sigue siendo decorativo |
+
+  `color/border/strong` (white 60 %) **no** se usa: es el borde portante de controles (3:1) y un divisor con ese peso dejaría de ser decorativo. ➡️ Los tres tokens están creados en FoundatiosKia (Semantic, alias, `ALL_FILLS` y `STROKE_COLOR`, `codeSyntax` web `--kia-component-divider-line-*`). **Falta publicar** la librería para importarlos y atar los fills.
+- Contraste (referencias de la página de color, sobre base / glass en dark): `border/subtle` 1,3 / 1,4 · `border/default` 1,8 / 1,9. `subtle` al 5 % queda por debajo de 1,3 y no está medido. Ninguno busca 3:1 a propósito.
+- Cambios de tamaño por tipografía Kia: no aplica (no tiene texto).
+
+**Comportamiento y plataforma**
+- Movimiento: ninguno. No cambia con la interacción; Reduce Motion no aplica.
+- Accesibilidad: decorativo por defecto, oculto al lector (`accessibilityElementsHidden`, `importantForAccessibility="no-hide-descendants"`, y `aria-hidden` en web). Si separa grupos con significado (`decorative={false}`): `role="separator"` en web; en native no existe un rol de separador en React Native, así que se deja a los encabezados y al orden de lectura. Un divisor no reemplaza a un encabezado.
+- Un archivo o uno por plataforma; dependencias nuevas: un solo archivo `Divider.tsx` con una `View` de grosor `border/width/divider` y color de token. Sin dependencias.
+- Estados y quién los resuelve: no tiene (ni hover, ni pressed, ni focus, ni disabled).
+
+**Propiedades anidadas** (público / fijo / derivado)
+- Ninguna: no anida componentes. Grosor → **derivado** (token, no se elige); color → **derivado** de `appearance`.
+
+**Decisiones acordadas con:** — · —
+
+**Reajustes aplicados en el component set**
+| Qué cambió | Por qué | ➡️ |
+|---|---|---|
+| `appearance` por defecto de `strong` a `default` (columnas intercambiadas en el canvas: Figma toma como default la variante superior izquierda) | Coincidir con la firma de código y con el uso más común | ➡️ 2026-10-26 (sin acordar) |
+| Alto (horizontal) y ancho (vertical) atados a `border/width/divider` de FoundatiosKia, en las 6 variantes | Que el grosor salga de un token Kia y no del otro sistema | ➡️ 2026-10-26 |
+| Descripción del set reescrita: ya no cita `color/border/divider/*` ni `color/border/control/default` | Nombres que no existen en Kia | ➡️ 2026-10-26 |
+| Creados `component/divider/line/{subtle,default,strong}` en FoundatiosKia | Dar a los tres pesos un color Kia parecido al blanco 8 % de los diseños | ➡️ 2026-10-26 (publicados e importados) |
+| Fill de las 6 variantes atado a `component/divider/line/{strong,default,subtle}` importados de FoundatiosKia (antes: un hex suelto en `horizontal · default` y variables del otro sistema en el resto) | Cero variables ajenas en el componente | ➡️ 2026-10-26 |
+| (propuesto) etiquetas de la matriz en orden strong · default · subtle y sección «Cuándo usar cada appearance» | Matriz legible en el orden de las variantes | ☐ |
+
+## F2 · Referencias
+
+- [x] `docs/header` y `docs/label` locales (2 y 4 instancias reemplazadas, con sus textos y tipo)
+- [x] Instancias remotas reemplazadas: `ListItem` (6) por filas simples de solo texto (`body/md/default`, `color/text/primary`), porque Core no tiene un ListItem local; los ejemplos solo muestran el divisor entre filas
+- [x] Links de índice a nodos del archivo: 4 en «Divider» y 8 en «Divider · Dev», hacia `rVdetvqgPFzRluJ86eTEju`
+- [x] Links de Storybook: `components-divider--docs` (diseño) y `components-divider--playground` (Dev). **No cargan hasta que exista la story y se publique el Storybook** (F5)
+
+**Inventario tras F2/F3 (2026-10-26, 324 nodos propios):** `remote` vacío, cero colecciones ajenas (solo `Semantic`, `Spacing`, `Radius`, `Typography` de FoundatiosKia), cero text styles sin Kia, 14 links (todos a este archivo o al Storybook de Kia).
+
+## F3 · Tokens
+
+**Mapa viejo → Kia** (propuesto; verificar uso antes de aplicar)
+| Antes | Ahora | Nota |
+|---|---|---|
+| `component/divider/line/strong` · `default` · `subtle` | los tres `component/divider/line/*` de Kia | mismos nombres, otros valores (ver F1) |
+| `border/width/divider` | `border/width/divider` | ➡️ ya enlazado |
+| `color/border/divider/subtle` (29 usos en la documentación) | `color/border/subtle` | guía §3.1 |
+| `color/canvas/surface/primary` · `background/page` | `color/surface/base` · `color/surface/sunken` | |
+| `color/canvas/surface/brand` (20 usos: chips y callout) | `color/fill/action/primary/glass/default` | tinte, no sólido (guía §3.1) |
+| `color/text/{primary,secondary,tertiary}` | mismos nombres | |
+| `color/text/brand` | `color/text/action/primary/ghost/default` | |
+| `font/size/label/sm·md` · `text/label/sm·md/strong` | `font/size/body/sm·md` · `text/body/sm·md/strong` | label desaparece en Kia |
+| `platform/font/style/{regular,emphasis}` | `font/style/{regular,emphasis}` | |
+| `space/doc/{sm,xl,2xl}`, `space/inset·inline·stack/*`, `radius/*`, `font/size/*`, `font/family/*` | mismos nombres | **`space/doc/*` sí existe en Kia** (40 · 72 · 80), a diferencia de lo que se anotó en IconButton |
+| `font/weight/medium` (13 usos, código) | sin token; lo aporta el text style `text/code/sm` | Kia solo tiene light · regular · bold |
+| `platform/component/listitem/leading-gap`, `size/target/min` | desaparecen con el ListItem remoto | |
+
+**Tokens creados en FoundatiosKia** (publicados ☑ · importados ☑ · `codeSyntax` ☑):
+- `component/divider/line/subtle` · `component/divider/line/default` · `component/divider/line/strong`
+
+- [x] `foundations/` re-exportado y `npm run tokens` revisado: el diff de `src/tokens/` son solo los tres `component/divider/line/*` en `componentColors` (dark `#FFFFFF0D` · `#FFFFFF1A` · `#FFFFFF33`; light `#05141F0D` · `#05141F1A` · `#05141F33`). El JSON de `foundations/` cambia mucho de tamaño por el formato de metadatos (normal según la guía)
+- [x] Inventario final sin colecciones ajenas
+- Revisión visual hecha en Figma (screenshot del frame de diseño). Falta mirar la matriz: el contorno punteado es el del component set y los tres pesos se ven muy tenues sobre `surface/base` en modo claro.
+
+## F4 · Documentación
+
+- [ ] Frame de diseño revisado (etiquetas en el orden de las variantes, sin «bDS», «Core components» ni «Jetto»)
+- [ ] Frame Dev contra el código, fila por fila (grosor sin «alto contraste», sin `border/input`, a11y con nombres de React Native)
+- [ ] `components/kia-divider-component.md` creado (plantilla: `kia-spinner-component.md`)
+
+## F5 · Código y Storybook
+
+- [ ] `Divider.tsx` (un solo archivo)
+- [ ] Stories (`Playground`, `Matrix`, `Orientation`, buenas prácticas) + `.mdx`
+- [ ] `npm run typecheck` · `npm run build-storybook`
+- [ ] Stories vistas en web, temas y densidades
+- [ ] Links de Figma comprobados (tras publicar)
+- [ ] Dispositivo / simulador: pendiente
+
+## Notas y decisiones abiertas
+
+1. **¿10 % como default?** Es lo más cercano al 8 % de los diseños sin crear un alpha. Si Design Lead quiere exactamente 8 %, hay que crear `alpha/white/8` (y `alpha/midnight/8`) y apuntar `default` ahí. Design Lead.
+2. **Regla de uso de los tres pesos** (strong entre secciones, default entre bloques, subtle entre filas densas). Hoy está escrita aquí como propuesta, no en la página. Design Lead.
+3. **`subtle` al 5 %** casi no se verá sobre glass; confirmar en pantalla real y, si no se ve, subirlo a `alpha/white/10` y mover `default` a 15 %. Design Lead.
+4. **Prop `decorative`** (oculto vs separador): confirmar el nombre y el valor por defecto. Tech Lead.
+5. **Qué hace el vertical sin alto:** propuesta `alignSelf: 'stretch'` y exigir contenedor con alto. Tech Lead.
+6. ~~`ListItem` remoto de los ejemplos~~ Resuelto con filas de texto; cuando exista un ListItem de Kia, los ejemplos pueden volver a usarlo.
+8. **Textos de la documentación sin reescribir (F4):** siguen diciendo «color/border/divider/*», «color/border/input», «contraste 1.48» y la matriz con columnas `default · subtle · strong`. El header ya dice «KIA DS» por el componente local.
+7. ~~Publicar FoundatiosKia~~ Hecho: tokens importados y fills del component set atados. Falta re-exportar `foundations/` y correr `npm run tokens` (F3).

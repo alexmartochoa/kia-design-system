@@ -1013,6 +1013,26 @@
   },
   {
     "collection": "size",
+    "name": "component/floatingactionbutton/icon/size/lg",
+    "type": "dimension",
+    "description": "Tamaño del icono del FloatingActionButton grande (lg).",
+    "values": {
+      "default": 36,
+      "expanded": 36
+    }
+  },
+  {
+    "collection": "size",
+    "name": "component/floatingactionbutton/size/lg",
+    "type": "dimension",
+    "description": "Tamaño del FloatingActionButton grande (lg), para tablet o layout expandido.",
+    "values": {
+      "default": 96,
+      "expanded": 96
+    }
+  },
+  {
+    "collection": "size",
     "name": "size/bar/height/lg",
     "type": "dimension",
     "description": "Barra de progreso gruesa",

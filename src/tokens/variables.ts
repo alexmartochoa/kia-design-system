@@ -413,6 +413,14 @@ export const variables = {
       "default": 32,
       "expanded": 32
     },
+    "component/floatingactionbutton/icon/size/lg": {
+      "default": 36,
+      "expanded": 36
+    },
+    "component/floatingactionbutton/size/lg": {
+      "default": 96,
+      "expanded": 96
+    },
     "size/bar/height/lg": {
       "default": 12,
       "expanded": 12
@@ -812,6 +820,9 @@ export const componentColors = {
     "component/button/primary-outline/bg-pressed": "#FFFFFF1A",
     "component/button/primary-outline/border": "#FFFFFF",
     "component/button/primary-outline/text": "#F8F8F8",
+    "component/divider/line/default": "#FFFFFF1A",
+    "component/divider/line/strong": "#FFFFFF33",
+    "component/divider/line/subtle": "#FFFFFF0D",
     "component/skeleton/bg": "#FFFFFF0D",
     "component/skeleton/highlight": "#FFFFFF0D",
     "component/skeleton/sheen-edge": "#FFFFFF00",
@@ -849,6 +860,9 @@ export const componentColors = {
     "component/button/primary-outline/bg-pressed": "#05141F1A",
     "component/button/primary-outline/border": "#05141F",
     "component/button/primary-outline/text": "#05141F",
+    "component/divider/line/default": "#05141F1A",
+    "component/divider/line/strong": "#05141F33",
+    "component/divider/line/subtle": "#05141F0D",
     "component/skeleton/bg": "#F0F1F2",
     "component/skeleton/highlight": "#05141F0D",
     "component/skeleton/sheen-edge": "#FFFFFF00",
