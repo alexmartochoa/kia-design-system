@@ -10,9 +10,10 @@ import { GLASS_INTENSITY, useButtonRadius, type GlassLayerProps } from './shared
  * La versión web es GlassLayer.web.tsx. En Android el blur necesita experimentalBlurMethod: sin él,
  * expo-blur dibuja solo una capa semitransparente y el vidrio no desenfoca.
  */
-export function GlassLayer({ flat }: GlassLayerProps) {
+export function GlassLayer({ flat, radius: radiusProp }: GlassLayerProps) {
   const { name } = useTheme();
-  const { radius } = useButtonRadius();
+  const buttonRadius = useButtonRadius().radius;
+  const radius = radiusProp ?? buttonRadius;
   const color = componentColors[name];
   return (
     // El recorte va en este View: el BlurView de Android no respeta borderRadius por sí solo.

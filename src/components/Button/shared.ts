@@ -20,4 +20,6 @@ export const GLASS_INTENSITY = Math.min(100, variables.semantic['elevation/raise
 export type GlassLayerProps = {
   /** Relleno plano en vez del degradado (disabled: el vidrio deja de sugerir volumen). */
   flat?: string;
+  /** Radio de la capa. Por defecto el del Button (radius/action); el IconButton pasa radius/pill. */
+  radius?: number;
 };

@@ -1,0 +1,72 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as IconButtonStories from './IconButton.stories';
+
+<Meta of={IconButtonStories} />
+
+# IconButton
+
+La misma acción que Button, sin etiqueta. Solo se usa cuando el glifo es inequívoco por sí mismo (cerrar, volver, buscar) o cuando el espacio no admite texto; si hay duda de qué hace, lleva etiqueta y entonces es Button. Es siempre un círculo (`radius/pill`) y el glifo sale del catálogo de KIA Icons. Contrato completo en `components/kia-iconbutton-component.md`.
+
+<Canvas of={IconButtonStories.Playground} />
+<Controls of={IconButtonStories.Playground} />
+
+## Matriz de variantes
+
+Las columnas son `state`; las filas, `appearance · size`. 36 combinaciones. pressed y focus se muestran congelados con `IconButtonView`; en el Playground responden al toque y al teclado.
+
+<Canvas of={IconButtonStories.Matrix} />
+
+## Cuándo usar cada «appearance»
+
+Tres pesos, de mayor a menor. Una sola `brand` por zona: si hay dos, ninguna se lee como la principal.
+
+<Canvas of={IconButtonStories.Hierarchy} />
+
+| appearance | Para qué | Fondo | Glifo |
+|---|---|---|---|
+| brand | La acción principal en formato icono | `component/button/primary/bg` | `component/button/primary/text` |
+| glass | Importante pero no la principal; sobre escena, mapa o foto | degradado `primary-glass/bg` → `primary-glass/bg-end` + blur | `component/button/primary-glass/text` |
+| ghost | Lo que está siempre disponible y rara vez se usa: la X de cerrar, volver | — | `component/button/primary-ghost/text` |
+
+Los `component/button/*` son aliases de FoundatiosKia sobre los `color/*` semantic; son los mismos que usa Button. En Figma, `neutral`, `veil`, `on-scene`, `on-media` y `on-inverse` siguen existiendo pero no tienen token Kia ni código: ver el contrato.
+
+## El vidrio
+
+Es el mismo de Button: degradado alpha-sage, desenfoque del fondo `elevation/raised/glass-blur` (20), sombra cercana y brillo interior arriba, recortado en círculo. Necesita algo detrás para verse como vidrio.
+
+<Canvas of={IconButtonStories.Glass} />
+
+El desenfoque nativo depende de `expo-blur`, igual que Button, y no se probó en dispositivo.
+
+## Iconos
+
+El glifo es cualquier `IconName` del catálogo de KIA Icons. No lleva color propio: lo da la apariencia y el estado.
+
+<Canvas of={IconButtonStories.Icons} />
+
+## Tamaños
+
+| size | Caja | Glifo |
+|---|---|---|
+| lg | 56 (`size/control/height/lg`) | 32 (`size/icon/lg`) |
+| md | 44 (`size/control/height/md`) | 24 (`size/icon/md`) |
+| sm | 32 (`size/control/height/sm`) | 16 (`size/icon/sm`) |
+
+md y sm quedan bajo el mínimo tocable de 48 (`size/target/min`): el `hitSlop` completa el área en los cuatro lados.
+
+## Props
+
+| Prop | Tipo | Default | Property de Figma |
+|---|---|---|---|
+| icon | IconName | — | `icon` de la instancia Icon anidada (expuesta) |
+| label | string | — | ninguna (accesibilidad) |
+| onPress | () => void | — | ninguna (comportamiento) |
+| appearance | 'brand' · 'glass' · 'ghost' | 'brand' | appearance (VARIANT) |
+| size | 'lg' · 'md' · 'sm' | 'md' | size (VARIANT) |
+| disabled | boolean | false | state=disabled |
+
+## Accesibilidad
+
+- `accessibilityRole="button"`; `label` es el nombre accesible y es obligatorio: sin texto visible, un icono sin nombre es un control mudo. Dice la acción, no el dibujo.
+- El `Icon` interno es decorativo (`accessibilityElementsHidden`, `importantForAccessibility="no-hide-descendants"`).
+- El anillo de foco (`border/focus`, 2 px) va por fuera, a 2 px, con `radius/focus/pill`: ningún contenedor puede recortarlo.
