@@ -1,0 +1,70 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+La acción. Todo lo que el usuario puede hacer en una pantalla pasa por acá: confirmar, cancelar, continuar, borrar. La intención la dice `variant`; el peso, `appearance`. Verde Kia, radio 16 y un vidrio verde para la acción que acompaña a la principal. Contrato completo en `components/kia-button-component.md`.
+
+<Canvas of={ButtonStories.Playground} />
+<Controls of={ButtonStories.Playground} />
+
+## Matriz de variantes
+
+Las columnas son `state`; las filas, `variant · appearance · size`. 105 combinaciones: `danger` no lleva glass. pressed y focus se muestran congelados con `ButtonView`; en el Playground responden al toque y al teclado.
+
+<Canvas of={ButtonStories.Matrix} />
+
+## Cuándo usar cada «appearance»
+
+Las cuatro pesan distinto y se ordenan de mayor a menor. Una sola `fill` por vista.
+
+<Canvas of={ButtonStories.Hierarchy} />
+
+| appearance | Para qué | Fondo | Texto |
+|---|---|---|---|
+| fill | La acción principal de la pantalla | `component/button/primary/bg` | `component/button/primary/text` |
+| glass | Importante pero no la principal. Solo primary | degradado `primary-glass/bg` → `primary-glass/bg-end` + blur | `component/button/primary-glass/text` |
+| outline | Alternativa clara, como «Cancelar» | — (borde `primary-outline/border`) | `component/button/primary-outline/text` |
+| ghost | Lo de menor peso: volver, ver más | — | `component/button/primary-ghost/text` |
+
+Los `component/button/*` son aliases de FoundatiosKia sobre los `color/*` semantic. `danger` repite fill, outline y ghost con `component/button/danger*`. Una acción destructiva nunca se presenta como glass: si llega `danger` + `glass`, se dibuja outline.
+
+## El vidrio
+
+Degradado alpha-sage (luz desde arriba), desenfoque del fondo `elevation/raised/glass-blur` (20), sombra cercana y brillo interior arriba: la receta de Raised de FoundatiosKia con el fondo propio del botón. Necesita algo detrás para verse como vidrio.
+
+<Canvas of={ButtonStories.Glass} />
+
+En web el desenfoque es `backdrop-filter`. En iOS y Android es el `BlurView` de `expo-blur` (en Android con `experimentalBlurMethod="dimezisBlurView"`). La app tiene que tener `expo-blur` instalado aunque no use Expo: `npx install-expo-modules@latest`, `npx expo install expo-blur` y `pod install`. El blur nativo todavía no se probó en dispositivo.
+
+## Tamaños
+
+| size | Alto | Padding | Texto | Icono |
+|---|---|---|---|---|
+| lg | 56 | `inset/lg` 24 | `body/lg/strong` | 24 |
+| md | 44 | `inset/md` 16 | `body/md/strong` | 24 |
+| sm | 32 | `inline/md` 12 | `body/sm/strong` | 16 |
+
+sm queda bajo el mínimo tocable: el área de 48 (`size/target/min`) la completa el `hitSlop`.
+
+## Props
+
+| Prop | Tipo | Default | Property de Figma |
+|---|---|---|---|
+| label | string | — | label (TEXT) |
+| onPress | () => void | — | ninguna (comportamiento) |
+| variant | 'primary' · 'danger' | 'primary' | variant (VARIANT) |
+| appearance | 'fill' · 'glass' · 'outline' · 'ghost' | 'fill' | appearance (VARIANT) |
+| size | 'lg' · 'md' · 'sm' | 'md' | size (VARIANT) |
+| leadingIcon · trailingIcon | IconName | — | showLeadingIcon · showTrailingIcon + icon |
+| disabled | boolean | false | state=disabled |
+| loading | boolean | false | state=loading |
+
+## Accesibilidad
+
+- `accessibilityRole="button"`, el `label` es el nombre accesible y `accessibilityState` lleva `disabled` y `busy`.
+- El anillo de foco (`border/focus`, 2 px) va por fuera, a 2 px del botón: ningún contenedor puede recortarlo.
+- En loading el contenido queda invisible sin cambiar el ancho, el Spinner anuncia el mismo label y el botón no responde.
+- El label dice la acción, no la confirmación: «Pagar», no «Aceptar».

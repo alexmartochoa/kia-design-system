@@ -2,7 +2,7 @@
 
 - **Fuente:** archivo de Figma `FoundatiosKia` (key `FCrL9DSEDaT0EgGg5y3aJ5`), página `Radius`, frame `Radius — Kia App` (27:6510).
 - **Fecha de lectura:** 2026-10-26
-- **Colecciones relacionadas:** `Radius Primitives` (8 variables, modo Default), `Radius` (37 variables, modos compact / regular / expanded). La colección `platform` solo tiene 2 variables de tamaño (no de radio); se menciona en Inconsistencias.
+- **Colecciones relacionadas:** `Radius Primitives` (8 variables, modo Default), `Radius` (33 variables, modos compact / regular / expanded). La colección `platform` solo tiene 2 variables de tamaño (no de radio); se menciona en Inconsistencias.
 - **Fuente de verdad:** las variables de Figma. El texto de la página es documentación.
 
 ---
@@ -39,7 +39,7 @@ Cada tipo de superficie tiene su radio, así una tarjeta, un campo y un botón s
 | surface | Tarjetas, hojas y modales | Crece con el tamaño de pantalla: compact < regular = expanded |
 | field | Campos de texto, TextArea, OTP y búsqueda | 8 px en iOS y web, 4 px en Android (Material 3). Búsqueda: cápsula en iOS y Android, 8 px en web |
 | control | Controles chicos como el Checkbox | 4 px en iOS y web, 2 px en Android |
-| action | Botones, chips y avatares | Botón: 8 px en las tres plataformas. Chips y avatares: pastilla (full) |
+| action | Botones, chips y avatares | Botón: 16 px en las tres plataformas. Chips y avatares: pastilla (full) |
 
 El anillo de foco siempre mide el radio del componente más 2 px, para que el contorno quede concéntrico.
 
@@ -73,14 +73,14 @@ Estos son los 19 radios por rol, con su valor en los tres modos de pantalla. Los
 | radius/field/md | 8 · 4 · 8 | 8 · 4 · 8 | 8 · 4 · 8 | Campo · iOS · Android · web |
 | radius/control/xs | 2 px | 2 px | 2 px | Marcas de gráfico muy angostas |
 | radius/control/sm | 4 · 2 · 4 | 4 · 2 · 4 | 4 · 2 · 4 | Checkbox y control pequeño · iOS · Android · web |
-| radius/action | 8 · 8 · 8 | 8 · 8 · 8 | 8 · 8 · 8 | Botón · iOS · Android · web |
+| radius/action | 16 px | 16 px | 16 px | Botón · igual en iOS, Android y web |
 | radius/action/icon | full | full | full | Botón de icono |
 | radius/pill | full | full | full | Chip / etiqueta / avatar |
 | radius/search | full · full · 8 | full · full · 8 | full · full · 8 | Búsqueda · iOS · Android · web |
 | radius/focus/surface | 14 px | 18 px | 18 px | Anillo de foco de una tarjeta |
 | radius/focus/field | 10 · 6 · 10 | 10 · 6 · 10 | 10 · 6 · 10 | Foco de un campo · iOS · Android · web |
 | radius/focus/field-compact | 10 · 6 · 10 | 10 · 6 · 10 | 10 · 6 · 10 | Foco de TextArea y OTP · iOS · Android · web |
-| radius/focus/action | 10 · 10 · 10 | 10 · 10 · 10 | 10 · 10 · 10 | Anillo de foco del botón · iOS · Android · web |
+| radius/focus/action | 20 px | 20 px | 20 px | Anillo de foco del botón · igual en iOS, Android y web |
 | radius/focus/control | 6 px | 6 px | 6 px | Anillo de foco de las filas de Menu |
 | radius/focus/search | full · full · 10 | full · full · 10 | full · full · 10 | Foco de búsqueda · iOS · Android · web |
 | radius/focus/pill | full | full | full | Foco de chips y avatares |
@@ -105,7 +105,7 @@ Estos son los valores en px que un diseñador usa en Figma, separados por lo que
 | Campo de texto | radius/field/md | 8 | 4 | 8 | 10 · 6 · 10 |
 | TextArea y OTP | radius/field/sm | 8 | 4 | 8 | 10 · 6 · 10 |
 | Búsqueda | radius/search | full | full | 8 | full · full · 10 |
-| Botón | radius/action | 8 | 8 | 8 | 10 · 10 · 10 |
+| Botón | radius/action | 16 | 16 | 16 | 20 (radio + 4: 2 de separación y 2 de anillo) |
 | Botón de icono | radius/action/icon | full | full | full | — |
 | Chip, etiqueta y avatar | radius/pill | full | full | full | full |
 | Checkbox y control pequeño | radius/control/sm | 4 | 2 | 4 | — |
@@ -132,7 +132,7 @@ Todas las variables tienen scope `CORNER_RADIUS` y tipo `FLOAT`. `full` = 9999.
 | radius/scale/2xl | FLOAT | 24 | — |
 | radius/scale/full | FLOAT | 9999 | — |
 
-### 2.2 Colección `Radius` (modos: compact / regular / expanded) — 37 variables
+### 2.2 Colección `Radius` (modos: compact / regular / expanded) — 33 variables
 
 Alias = primitivo en `Radius Primitives`. Si no hay alias, el valor es literal (no apunta a primitivo).
 
@@ -165,13 +165,11 @@ Alias = primitivo en `Radius Primitives`. Si no hay alias, el valor es literal (
 | radius/control/sm/android | →scale/xs (2) | Checkbox y control pequeño · Android |
 | radius/control/sm/web | →scale/sm (4) | Checkbox y control pequeño · web |
 
-**Action / pill (5)**
+**Action / pill (3)**
 
 | Token | compact = regular = expanded | Descripción |
 |---|---|---|
-| radius/action/ios | →scale/md (8) | Botón · iOS |
-| radius/action/android | →scale/md (8) | Botón · Android |
-| radius/action/web | →scale/md (8) | Botón · web |
+| radius/action | →scale/xl (16) | Botón · iOS, Android y web (un solo radio en las tres) |
 | radius/action/icon | →scale/full (9999) | Botón de icono |
 | radius/pill | →scale/full (9999) | Chip, etiqueta y avatar |
 
@@ -183,7 +181,7 @@ Alias = primitivo en `Radius Primitives`. Si no hay alias, el valor es literal (
 | radius/search/android | →scale/full (9999) | Campo de búsqueda · Android |
 | radius/search/web | →scale/md (8) | Campo de búsqueda · web |
 
-**Focus (15) — valores literales salvo los `full`**
+**Focus (13) — valores literales salvo los `full`**
 
 | Token | compact | regular | expanded | Alias | Descripción |
 |---|---|---|---|---|---|
@@ -194,9 +192,7 @@ Alias = primitivo en `Radius Primitives`. Si no hay alias, el valor es literal (
 | radius/focus/field-compact/ios | 10 | 10 | 10 | literal | Foco de TextArea y OTP · iOS |
 | radius/focus/field-compact/android | 6 | 6 | 6 | literal | Foco de TextArea y OTP · Android |
 | radius/focus/field-compact/web | 10 | 10 | 10 | literal | Foco de TextArea y OTP · web |
-| radius/focus/action/ios | 10 | 10 | 10 | literal | Foco del botón · iOS |
-| radius/focus/action/android | 10 | 10 | 10 | literal | Foco del botón · Android |
-| radius/focus/action/web | 10 | 10 | 10 | literal | Foco del botón · web |
+| radius/focus/action | 20 | 20 | 20 | literal | Anillo de foco del botón · iOS, Android y web (radio + 4) |
 | radius/focus/control | 6 | 6 | 6 | literal | Foco de las filas de Menu |
 | radius/focus/search/ios | 9999 | 9999 | 9999 | →scale/full | Foco de búsqueda · iOS |
 | radius/focus/search/android | 9999 | 9999 | 9999 | →scale/full | Foco de búsqueda · Android |
@@ -220,7 +216,7 @@ Modos iOS / Android / web. No se usa en los tokens de Radius (la plataforma se r
 2. Superficies (tarjetas, modales, hojas) usan `radius/surface/*` y **cambian por modo de pantalla**: compact < regular = expanded. Elige el modo según el tamaño de pantalla, no la plataforma.
 3. Campos, botones, búsqueda y controles pequeños cambian **por plataforma** (sufijo `/ios`, `/android`, `/web`) y son iguales en los 3 modos de pantalla.
 4. Campo de texto = `radius/field/md/{plataforma}`; TextArea y OTP = `radius/field/sm/{plataforma}`. Ambos: 8 en iOS y web, 4 en Android.
-5. Botón = `radius/action/{plataforma}` (8 en las tres); botón de icono = `radius/action/icon` (pastilla); chips, etiquetas y avatares = `radius/pill`.
+5. Botón = `radius/action` (16, sin sufijo de plataforma: es igual en las tres); su foco = `radius/focus/action` (20); botón de icono = `radius/action/icon` (pastilla); chips, etiquetas y avatares = `radius/pill`.
 6. Búsqueda = `radius/search/{plataforma}`: pastilla en iOS y Android, 8 en web.
 7. Checkbox y controles pequeños = `radius/control/sm/{plataforma}` (4 · 2 · 4); marcas de gráfico muy angostas = `radius/control/xs` (2).
 8. El anillo de foco usa el token `radius/focus/*` del componente (radio + 2 px, concéntrico). Nunca inventes un radio de foco. Filas de Menu: `radius/focus/control` (6) en todas las plataformas.
@@ -233,8 +229,8 @@ Modos iOS / Android / web. No se usa en los tokens de Radius (la plataforma se r
 
 Las variables son la fuente de verdad.
 
-1. **Cantidad de tokens:** el texto dice "19 radios por rol"; la colección `Radius` tiene **37 variables**. Es consistente: 19 roles, de los cuales 9 se dividen en `/ios`, `/android`, `/web` (10 sin dividir + 9×3 = 37).
-2. **Nombres con plataforma:** la página muestra `radius/field/md`, `radius/action`, `radius/search`, `radius/control/sm`, `radius/focus/field`, `radius/focus/field-compact`, `radius/focus/action`, `radius/focus/search` sin sufijo. En Figma esos nombres **no existen solos**: existen como `.../ios`, `.../android`, `.../web`.
+1. **Cantidad de tokens:** el texto dice "19 radios por rol"; la colección `Radius` tiene **33 variables**: 19 roles, de los cuales 7 se dividen en `/ios`, `/android`, `/web` (12 sin dividir + 7×3 = 33). `radius/action` y `radius/focus/action` dejaron de dividirse el 2026-10-26, cuando el botón pasó a 16 en las tres plataformas.
+2. **Nombres con plataforma:** la página muestra `radius/field/md`, `radius/search`, `radius/control/sm`, `radius/focus/field`, `radius/focus/field-compact`, `radius/focus/search` sin sufijo. En Figma esos nombres **no existen solos**: existen como `.../ios`, `.../android`, `.../web`.
 3. **Plataforma vía nombre, no vía modo:** el texto dice "cambian según la plataforma", pero la colección `Radius` solo tiene modos de pantalla (compact/regular/expanded); la plataforma se codifica en el nombre. La colección `platform` (modos iOS/Android/web) no contiene ningún radio.
 4. **Notación del texto:** en Buenas prácticas se escribe `radius.surface.xs` (puntos); el token real es `radius/surface/xs`.
 5. **Regla "foco = radio + 2 px" con excepciones:** `radius/focus/control` es 6 para todas las plataformas, pero `radius/control/sm` es 4 · 2 · 4 (radio + 2 daría 6 · 4 · 6). Está documentado como foco de filas de Menu, no del checkbox, así que no hay token de foco para `radius/control/sm`. Tampoco hay foco definido para `surface/sm` ni `surface/lg` (la tabla muestra "—"); solo `radius/focus/surface` (14 · 18 · 18), que corresponde a `surface/md`.

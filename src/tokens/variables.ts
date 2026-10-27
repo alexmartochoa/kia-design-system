@@ -1,5 +1,5 @@
 // GENERADO por scripts/build-variables.mjs desde foundations/kia-foundations-variables.json. No editar a mano.
-// Uso: variables.radius['action/ios'].regular · variables.motion['duration/medium'].Default
+// Uso: variables.radius['radius/action'].regular · variables.motion['duration/medium'].Default
 // Motion: duraciones en ms; easing como string cubic-bezier (en RN usar Easing.bezier).
 export const variables = {
   "border-primitives": {
@@ -90,25 +90,15 @@ export const variables = {
     }
   },
   "radius": {
-    "radius/action/android": {
-      "compact": 8,
-      "expanded": 8,
-      "regular": 8
+    "radius/action": {
+      "compact": 16,
+      "expanded": 16,
+      "regular": 16
     },
     "radius/action/icon": {
       "compact": 9999,
       "expanded": 9999,
       "regular": 9999
-    },
-    "radius/action/ios": {
-      "compact": 8,
-      "expanded": 8,
-      "regular": 8
-    },
-    "radius/action/web": {
-      "compact": 8,
-      "expanded": 8,
-      "regular": 8
     },
     "radius/control/sm/android": {
       "compact": 2,
@@ -160,20 +150,10 @@ export const variables = {
       "expanded": 8,
       "regular": 8
     },
-    "radius/focus/action/android": {
-      "compact": 10,
-      "expanded": 10,
-      "regular": 10
-    },
-    "radius/focus/action/ios": {
-      "compact": 10,
-      "expanded": 10,
-      "regular": 10
-    },
-    "radius/focus/action/web": {
-      "compact": 10,
-      "expanded": 10,
-      "regular": 10
+    "radius/focus/action": {
+      "compact": 20,
+      "expanded": 20,
+      "regular": 20
     },
     "radius/focus/control": {
       "compact": 6,
@@ -801,3 +781,81 @@ export const variables = {
 } as const;
 
 export type VariableCollection = keyof typeof variables;
+
+/** Colores de componente por tema: componentColors.dark['component/button/primary/bg']. */
+export const componentColors = {
+  "dark": {
+    "component/button/danger/bg": "#C03809",
+    "component/button/danger/bg-pressed": "#9E2A00",
+    "component/button/danger/text": "#FFFFFF",
+    "component/button/danger-ghost/bg-pressed": "#FFFFFF1A",
+    "component/button/danger-ghost/text": "#FFA289",
+    "component/button/danger-outline/bg-pressed": "#FFFFFF1A",
+    "component/button/danger-outline/border": "#FC744F",
+    "component/button/danger-outline/text": "#FFA289",
+    "component/button/disabled/bg": "#FFFFFF0D",
+    "component/button/disabled/border": "#FFFFFF1A",
+    "component/button/disabled/text": "#697279",
+    "component/button/focus/ring": "#72A2C8",
+    "component/button/glass/highlight": "#FFFFFF4C",
+    "component/button/glass/shadow": "#00000040",
+    "component/button/primary/bg": "#5D7D2B",
+    "component/button/primary/bg-pressed": "#496619",
+    "component/button/primary/text": "#FFFFFF",
+    "component/button/primary-ghost/bg-pressed": "#5D7D2B33",
+    "component/button/primary-ghost/text": "#8FB162",
+    "component/button/primary-glass/bg": "#DAE8E026",
+    "component/button/primary-glass/bg-end": "#DAE8E01A",
+    "component/button/primary-glass/bg-pressed": "#FFFFFF1A",
+    "component/button/primary-glass/border": "#DAE8E040",
+    "component/button/primary-glass/text": "#F8F8F8",
+    "component/button/primary-outline/bg-pressed": "#FFFFFF1A",
+    "component/button/primary-outline/border": "#FFFFFF",
+    "component/button/primary-outline/text": "#F8F8F8",
+    "component/skeleton/bg": "#FFFFFF0D",
+    "component/skeleton/highlight": "#FFFFFF0D",
+    "component/skeleton/sheen-edge": "#FFFFFF00",
+    "component/spinner/indicator/brand": "#5D7D2B",
+    "component/spinner/indicator/default": "#E6E8E9",
+    "component/spinner/indicator/on-brand": "#FFFFFF",
+    "component/spinner/track/default": "#FFFFFF1A",
+    "component/spinner/track/on-brand": "#FFFFFF4C"
+  },
+  "light": {
+    "component/button/danger/bg": "#C03809",
+    "component/button/danger/bg-pressed": "#9E2A00",
+    "component/button/danger/text": "#FFFFFF",
+    "component/button/danger-ghost/bg-pressed": "#05141F1A",
+    "component/button/danger-ghost/text": "#9E2A00",
+    "component/button/danger-outline/bg-pressed": "#05141F1A",
+    "component/button/danger-outline/border": "#C03809",
+    "component/button/danger-outline/text": "#9E2A00",
+    "component/button/disabled/bg": "#F0F1F2",
+    "component/button/disabled/border": "#05141F1A",
+    "component/button/disabled/text": "#9BA1A5",
+    "component/button/focus/ring": "#417297",
+    "component/button/glass/highlight": "#FFFFFF4C",
+    "component/button/glass/shadow": "#05141F1A",
+    "component/button/primary/bg": "#5D7D2B",
+    "component/button/primary/bg-pressed": "#496619",
+    "component/button/primary/text": "#FFFFFF",
+    "component/button/primary-ghost/bg-pressed": "#5D7D2B1A",
+    "component/button/primary-ghost/text": "#496619",
+    "component/button/primary-glass/bg": "#F1F8E8",
+    "component/button/primary-glass/bg-end": "#F1F8E8",
+    "component/button/primary-glass/bg-pressed": "#05141F1A",
+    "component/button/primary-glass/border": "#05141F1A",
+    "component/button/primary-glass/text": "#05141F",
+    "component/button/primary-outline/bg-pressed": "#05141F1A",
+    "component/button/primary-outline/border": "#05141F",
+    "component/button/primary-outline/text": "#05141F",
+    "component/skeleton/bg": "#F0F1F2",
+    "component/skeleton/highlight": "#05141F0D",
+    "component/skeleton/sheen-edge": "#FFFFFF00",
+    "component/spinner/indicator/brand": "#5D7D2B",
+    "component/spinner/indicator/default": "#37434C",
+    "component/spinner/indicator/on-brand": "#FFFFFF",
+    "component/spinner/track/default": "#05141F1A",
+    "component/spinner/track/on-brand": "#FFFFFF4C"
+  }
+} as const;

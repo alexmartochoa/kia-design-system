@@ -1,7 +1,8 @@
 // Lee foundations/kia-foundations-variables.json (export W3C de Figma, todas las colecciones) y genera:
 //   src/tokens/variables.data.json -> todas las variables no-color, con alias resueltos por modo
 //   src/tokens/variables.ts        -> variables[colección]['ruta/del/token'][modo] para RN
-// Los colores ya los cubre build-tokens.mjs (con descripciones de los .md).
+// Los colores ya los cubre build-tokens.mjs (con descripciones de los .md), salvo los component/*:
+//   esos solo viven en Figma y salen acá como componentColors[tema]['component/…'] (hex resuelto).
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -38,7 +39,8 @@ const walk = (collection, node, path) => {
     const modes = Object.keys(ext?.lastSyncedValue ?? { Default: 1 });
     vars.push({
       collection,
-      name: path.join('/'),
+      // El export marca con «@» un token que también es grupo (radius/action y radius/action/icon).
+      name: path.filter((p) => p !== '@').join('/'),
       type: node.$type,
       description: node.$description ?? '',
       alias: typeof node.$value === 'string' && node.$value.startsWith('{') ? node.$value.replace(/[{}]/g, '') : undefined,
@@ -55,16 +57,24 @@ const out = join(root, 'src/tokens');
 mkdirSync(out, { recursive: true });
 writeFileSync(join(out, 'variables.data.json'), JSON.stringify(nonColor, null, 2) + '\n');
 
+// Tokens de color de componente (component/button/*, component/spinner/*…), resueltos a hex por tema.
+const componentColors = {};
+for (const v of vars.filter((v) => v.type === 'color' && v.name.startsWith('component/')))
+  for (const [mode, value] of Object.entries(v.values)) (componentColors[mode] ??= {})[v.name] = value;
+
 const byCollection = {};
 for (const v of nonColor) (byCollection[v.collection] ??= {})[v.name] = v.values;
 const ts = `// GENERADO por scripts/build-variables.mjs desde foundations/kia-foundations-variables.json. No editar a mano.
-// Uso: variables.radius['action/ios'].regular · variables.motion['duration/medium'].Default
+// Uso: variables.radius['radius/action'].regular · variables.motion['duration/medium'].Default
 // Motion: duraciones en ms; easing como string cubic-bezier (en RN usar Easing.bezier).
 export const variables = ${JSON.stringify(byCollection, null, 2)} as const;
 
 export type VariableCollection = keyof typeof variables;
+
+/** Colores de componente por tema: componentColors.dark['component/button/primary/bg']. */
+export const componentColors = ${JSON.stringify(componentColors, null, 2)} as const;
 `;
 writeFileSync(join(out, 'variables.ts'), ts);
 
 const counts = Object.fromEntries(Object.entries(byCollection).map(([k, v]) => [k, Object.keys(v).length]));
-console.log(`Variables totales: ${vars.length} (color: ${vars.length - nonColor.length}, otras: ${nonColor.length})`, counts);
+console.log(`Variables totales: ${vars.length} (color: ${vars.length - nonColor.length}, otras: ${nonColor.length}, de componente: ${Object.keys(componentColors.dark ?? {}).length})`, counts);

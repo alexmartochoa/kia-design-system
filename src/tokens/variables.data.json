@@ -230,14 +230,14 @@
   },
   {
     "collection": "radius",
-    "name": "radius/action/android",
+    "name": "radius/action",
     "type": "dimension",
-    "description": "Botón · Android",
-    "alias": "radius-primitives.radius.scale.md",
+    "description": "Botón · iOS, Android y web (un solo radio en las tres)",
+    "alias": "radius-primitives.radius.scale.xl",
     "values": {
-      "compact": 8,
-      "expanded": 8,
-      "regular": 8
+      "compact": 16,
+      "expanded": 16,
+      "regular": 16
     }
   },
   {
@@ -250,30 +250,6 @@
       "compact": 9999,
       "expanded": 9999,
       "regular": 9999
-    }
-  },
-  {
-    "collection": "radius",
-    "name": "radius/action/ios",
-    "type": "dimension",
-    "description": "Botón · iOS",
-    "alias": "radius-primitives.radius.scale.md",
-    "values": {
-      "compact": 8,
-      "expanded": 8,
-      "regular": 8
-    }
-  },
-  {
-    "collection": "radius",
-    "name": "radius/action/web",
-    "type": "dimension",
-    "description": "Botón · web",
-    "alias": "radius-primitives.radius.scale.md",
-    "values": {
-      "compact": 8,
-      "expanded": 8,
-      "regular": 8
     }
   },
   {
@@ -398,35 +374,13 @@
   },
   {
     "collection": "radius",
-    "name": "radius/focus/action/android",
+    "name": "radius/focus/action",
     "type": "dimension",
-    "description": "Foco del botón · Android",
+    "description": "Anillo de foco del botón · iOS, Android y web (radius/action + 4: 2 de separación y 2 de anillo)",
     "values": {
-      "compact": 10,
-      "expanded": 10,
-      "regular": 10
-    }
-  },
-  {
-    "collection": "radius",
-    "name": "radius/focus/action/ios",
-    "type": "dimension",
-    "description": "Foco del botón · iOS",
-    "values": {
-      "compact": 10,
-      "expanded": 10,
-      "regular": 10
-    }
-  },
-  {
-    "collection": "radius",
-    "name": "radius/focus/action/web",
-    "type": "dimension",
-    "description": "Foco del botón · web",
-    "values": {
-      "compact": 10,
-      "expanded": 10,
-      "regular": 10
+      "compact": 20,
+      "expanded": 20,
+      "regular": 20
     }
   },
   {

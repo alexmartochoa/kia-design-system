@@ -6,7 +6,7 @@
 - **Fecha de lectura:** 2026-10-27
 - **Código:** `src/components/Spinner/` · Storybook: `Components/Spinner`
 
-> Indicador de carga indeterminado. Se usa cuando la espera es corta y no se sabe cuánto va a durar. Con reduced-motion el giro se detiene y el arco queda quieto. Nunca mostrar un importe a medio cargar: usar Skeleton para datos financieros.
+> Indicador de carga indeterminado. Se usa cuando la espera es corta y no se sabe cuánto va a durar. Con Reduce Motion el giro se detiene y el arco queda quieto. Nunca mostrar un importe a medio cargar: usar Skeleton para datos financieros.
 
 ---
 
@@ -39,7 +39,7 @@ Los `component/spinner/*` son aliases de FoundatiosKia (colección Semantic, mod
 
 ### 03 Antes de usarlo
 
-Indicador de carga indeterminado. La rotación se implementa en código con `motion/duration/*`. Con reduced-motion se detiene y queda el arco. Nunca mostrar un importe a medio cargar: usar Skeleton para datos financieros.
+Indicador de carga indeterminado. La rotación se implementa en código con `motion/duration/extra-long`: en el hilo nativo en iOS y Android, en JS en web. Con Reduce Motion el giro se detiene y el arco queda quieto. Nunca mostrar un importe a medio cargar: usar Skeleton para datos financieros.
 
 ### 04 Buenas prácticas (2 pares)
 
