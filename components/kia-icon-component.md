@@ -70,9 +70,9 @@ El paso no se elige por gusto: lo decide el contexto. Si dudas entre dos, `sm` r
 type IconSize = '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 interface IconProps {
-  name: IconName        // del catálogo de la librería (página _Iconos)
+  name: IconName        // catálogo de glyphs.ts (componentes icon/<nombre> de KIA Icons)
   size?: IconSize       // 'md'
-  color?: string        // token semantic; por defecto hereda del contexto
+  color?: string        // token semantic; por defecto icon/default del tema
   label?: string        // si falta, el icono es decorativo (aria-hidden)
 }
 ```
@@ -81,9 +81,9 @@ interface IconProps {
 
 | Prop | Tipo | Default | Property de Figma | Nota |
 |---|---|---|---|---|
-| name | IconName | — | icon (INSTANCE_SWAP) | Requerida. El catálogo vive en la página `_Iconos`. |
+| name | IconName | — | icon (INSTANCE_SWAP) | Requerida. El catálogo vive en `glyphs.ts`: un glifo por componente `icon/<nombre>` del archivo KIA Icons. |
 | size | '2xs' · 'xs' · 'sm' · 'md' · 'lg' · 'xl' | 'md' | size (VARIANT) | Mismos valores que el eje. En Figma van de mayor a menor. |
-| color | string (token) | hereda | ninguna | Divergencia: en Figma el color lo pinta quien instancia. En código es prop, y solo acepta tokens semantic. |
+| color | string (token) | icon/default | ninguna | Divergencia: en Figma el color lo pinta quien instancia. En código es prop, y solo acepta tokens semantic. |
 | label | string | — | ninguna | Divergencia: la accesibilidad no se puede modelar en Figma. Sin label el icono es decorativo. |
 
 ### 03 Instancias anidadas (1 instancia · 1 prop)
@@ -114,7 +114,7 @@ Del Icon se usa una sola cosa, el glifo. El tamaño no se toca a mano y el color
 | El glifo | el mismo SVG | el mismo SVG | Un icono no cambia entre plataformas. Si cambia, es otro icono. |
 | Formato | SVG inline o sprite | react-native-svg | El exporter emite el mismo path; cambia el envoltorio. |
 | Tamaño | rem, no px | dp | Con px, el ajuste de tamaño de fuente del navegador no hace nada: falla WCAG 1.4.4. |
-| Decorativo | aria-hidden="true" | accessibilityElementsHidden / importantForAccessibility="no" | Un icono decorativo que se anuncia es ruido en el lector de pantalla. |
+| Decorativo | aria-hidden="true" | accessibilityElementsHidden + importantForAccessibility="no-hide-descendants" | Un icono decorativo que se anuncia es ruido en el lector de pantalla. |
 
 ### 06 Estados, tokens y a11y
 
@@ -131,7 +131,7 @@ Del Icon se usa una sola cosa, el glifo. El tamaño no se toca a mano y el color
 
 | # | Qué | Quién lo cierra |
 |---|---|---|
-| 1 | `color` y `label` no existen como property en Figma: el color lo pinta quien instancia y la accesibilidad no se puede modelar en el archivo. Son dos divergencias missing-in-figma y necesitan firma para dejar de ser deuda. | Design Lead + Tech Lead. Gobernanza de KIA DS. |
+| 1 | `color` y `label` no existen como property en Figma: el color lo pinta quien instancia y la accesibilidad no se puede modelar en el archivo. Son dos divergencias missing-in-figma y necesitan firma para dejar de ser deuda. | Design Lead + Tech Lead. |
 | 2 | La escala de iconos no tiene paso de 20. Por eso hay componentes que usan el mismo paso para dos tallas suyas: LinkButton md y sm comparten 16, Button md y lg comparten 24. No es un problema del Icon, pero el contrato de esos dos tiene que decirlo y hoy no lo dice. | Design Lead. Decidir si entra size/icon/20 o si el solape se declara y punto. |
 | 3 | El catálogo no está versionado. Agregar, renombrar o borrar un glifo cambia la unión IconName y hoy no hay proceso: se hace y se avisa por chat. | Design Lead + Tech Lead. Material de gobernanza de KIA DS. |
 

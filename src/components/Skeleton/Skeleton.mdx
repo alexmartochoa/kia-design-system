@@ -1,0 +1,37 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as SkeletonStories from './Skeleton.stories';
+
+<Meta of={SkeletonStories} />
+
+# Skeleton
+
+El lugar reservado de lo que todavía no llegó. Tiene la forma del contenido que viene, así la pantalla no salta cuando el dato aparece. Contrato completo en `components/kia-skeleton-component.md`.
+
+<Canvas of={SkeletonStories.Playground} />
+<Controls of={SkeletonStories.Playground} />
+
+## Matriz de variantes
+
+Las columnas son `shape`; las filas, `size`, que significa algo distinto en cada forma.
+
+<Canvas of={SkeletonStories.Matrix} />
+
+| shape | Qué hace `size` | lg · md · sm |
+|---|---|---|
+| text | Altura de línea de la rampa que reemplaza (`font/line-height/*`) | 24 · 20 · 16 |
+| block | Radio (`radius/surface/*`); alto y ancho los pone el layout | lg · md · sm |
+| circle | Diámetro del avatar (`component/avatar/size/*`) | 56 · 40 · 32 |
+
+## `lines` y `width`
+
+No existen en Figma y no pueden existir: son la forma del contenido, y la sabe la pantalla.
+
+<Canvas of={SkeletonStories.Paragraph} />
+<Canvas of={SkeletonStories.ListItem} />
+
+## Accesibilidad y movimiento
+
+- Las formas van ocultas al lector; el contenedor anuncia «Cargando» una sola vez (`progressbar`, live region `polite`, `busy`).
+- Con Reduce Motion el brillo se detiene y queda la base quieta, nunca parpadeo.
+- El skeleton se reemplaza por el contenido real, no se apila encima. Si la pantalla salta cuando llega el dato, la forma estaba mal.
+- Para datos financieros va Skeleton: nunca mostrar un importe a medio cargar.

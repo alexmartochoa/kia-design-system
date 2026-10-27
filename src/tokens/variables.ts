@@ -421,6 +421,18 @@ export const variables = {
     }
   },
   "size": {
+    "component/avatar/size/lg": {
+      "default": 56,
+      "expanded": 56
+    },
+    "component/avatar/size/md": {
+      "default": 40,
+      "expanded": 40
+    },
+    "component/avatar/size/sm": {
+      "default": 32,
+      "expanded": 32
+    },
     "size/bar/height/lg": {
       "default": 12,
       "expanded": 12
@@ -491,6 +503,16 @@ export const variables = {
     }
   },
   "spacing": {
+    "space/doc/2xl": {
+      "compact": 80,
+      "expanded": 80,
+      "regular": 80
+    },
+    "space/doc/sm": {
+      "compact": 40,
+      "expanded": 40,
+      "regular": 40
+    },
     "space/doc/xl": {
       "compact": 72,
       "expanded": 72,

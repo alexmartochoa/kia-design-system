@@ -151,7 +151,7 @@ Sobre fondo midnight-975 (modo oscuro) los colores de marca se aclaran un paso o
 
 # Parte 2 · Color semántico
 
-Colección **Semantic** · 2 modos (`light`, `dark`) · 81 variables de color (las 29 variables numéricas de la colección, como blur y desplazamiento de elevación, anchos de borde y opacidad, no se incluyen aquí). Cada celda muestra el primitivo al que apunta el token y su valor resuelto.
+Colección **Semantic** · 2 modos (`light`, `dark`) · 82 variables de color (las 29 variables numéricas de la colección, como blur y desplazamiento de elevación, anchos de borde y opacidad, no se incluyen aquí). Cada celda muestra el primitivo al que apunta el token y su valor resuelto.
 
 ## Documentación de la página
 
@@ -166,7 +166,7 @@ La app solo tiene modo oscuro: **dark es el único modo en uso** y está sacado 
 - **Contraste:** las cifras son WCAG sobre el fondo indicado. Texto pide 4,5:1; iconos, bordes de controles y rellenos gráficos piden 3:1.
 - **Fondos de referencia en dark:** base midnight-975 (#05141F) y glass (alpha-white-10 sobre base = #1E2C35). Todo texto se verifica sobre los dos.
 
-### 01 Superficies (6 tokens)
+### 01 Superficies (7 tokens)
 
 Dónde se apoya el contenido. En KIA la superficie principal no es un color sólido sino el glass: una capa translúcida con desenfoque que se repite en tarjetas, botones y contenedores. Las tarjetas usan un glass neutro; el tinte verde queda solo para los botones glass (04 Acción), así se distingue qué se toca y qué solo contiene.
 
@@ -327,7 +327,7 @@ Para que todos los valores de esta página existan hay que sumar 10 primitivos a
 
 ---
 
-## Tokens semánticos (81 variables de color)
+## Tokens semánticos (82 variables de color)
 
 Formato de celda: `primitivo` → valor resuelto. Se muestra **dark** primero porque es el modo en uso; **light** es reserva.
 
@@ -341,6 +341,7 @@ Formato de celda: `primitivo` → valor resuelto. Se muestra **dark** primero po
 | `color/surface/glass-strong` | alpha/white/15 → #FFFFFF26 | static/white → #FFFFFF |
 | `color/surface/overlay` | midnight/950 → #14222C | static/white → #FFFFFF |
 | `color/surface/scrim` | alpha/midnight/60 → #05141F99 | alpha/midnight/40 → #05141F66 |
+| `color/surface/inverse` | midnight/800 → #37434C | static/midnight → #05141F |
 
 ### Border
 

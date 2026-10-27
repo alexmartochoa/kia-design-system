@@ -1,0 +1,44 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as SpinnerStories from './Spinner.stories';
+
+<Meta of={SpinnerStories} />
+
+# Spinner
+
+Indicador de carga indeterminado. Se usa cuando la espera es corta y no se sabe cuánto va a durar. Vive dentro del control que espera (Button, campos) y casi nunca suelto. Contrato completo en `components/kia-spinner-component.md`.
+
+<Canvas of={SpinnerStories.Playground} />
+<Controls of={SpinnerStories.Playground} />
+
+## Matriz de variantes
+
+Las columnas son `appearance`; las filas, `size`. El tamaño sale de `size/icon/sm · md · lg` (16 · 24 · 32) y el grosor del arco es el 10% del diámetro.
+
+<Canvas of={SpinnerStories.Matrix} />
+
+## La apariencia sigue a la superficie
+
+`brand` sobre la página, `primary` cuando el spinner acompaña texto neutro, `on-brand` solo sobre fondo de marca. No es una decisión estética.
+
+<Canvas of={SpinnerStories.OnSurfaces} />
+
+| appearance | Indicador | Pista |
+|---|---|---|
+| brand | `fill/action/primary/default` | `border/subtle` |
+| primary | `icon/default` | `border/subtle` |
+| on-brand | `text/on-fill` | `alpha/white/30` |
+
+## Props
+
+| Prop | Tipo | Default | Property de Figma |
+|---|---|---|---|
+| appearance | 'brand' · 'primary' · 'on-brand' | 'brand' | appearance (VARIANT) |
+| size | 'sm' · 'md' · 'lg' | 'md' | size (VARIANT) |
+| label | string | "Cargando" | ninguna (divergencia) |
+
+## Accesibilidad y movimiento
+
+- Role `progressbar` con live region `polite` y `busy`: quien no ve el giro se entera igual de que hay una espera.
+- Con Reduce Motion el giro se detiene y el arco queda quieto. No desaparece: dejar de moverse no es dejar de informar.
+- Si la espera se puede medir, el componente correcto es ProgressBar. Si se sabe la forma de lo que viene, Skeleton.
+- Una vuelta dura `motion/duration/extra-long` (700 ms), lineal.

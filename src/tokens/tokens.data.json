@@ -446,6 +446,15 @@
         "description": ""
       },
       {
+        "name": "color/surface/inverse",
+        "group": "surface",
+        "dark": "#37434C",
+        "light": "#05141F",
+        "darkRef": "midnight/800",
+        "lightRef": "static/midnight",
+        "description": ""
+      },
+      {
         "name": "color/border/subtle",
         "group": "border",
         "dark": "#FFFFFF1A",

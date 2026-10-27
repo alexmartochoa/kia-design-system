@@ -1029,6 +1029,36 @@
   },
   {
     "collection": "size",
+    "name": "component/avatar/size/lg",
+    "type": "dimension",
+    "description": "Tamaño del Avatar y de su Skeleton circular (lg).",
+    "values": {
+      "default": 56,
+      "expanded": 56
+    }
+  },
+  {
+    "collection": "size",
+    "name": "component/avatar/size/md",
+    "type": "dimension",
+    "description": "Tamaño del Avatar y de su Skeleton circular (md).",
+    "values": {
+      "default": 40,
+      "expanded": 40
+    }
+  },
+  {
+    "collection": "size",
+    "name": "component/avatar/size/sm",
+    "type": "dimension",
+    "description": "Tamaño del Avatar y de su Skeleton circular (sm).",
+    "values": {
+      "default": 32,
+      "expanded": 32
+    }
+  },
+  {
+    "collection": "size",
     "name": "size/bar/height/lg",
     "type": "dimension",
     "description": "Barra de progreso gruesa",
@@ -1195,6 +1225,30 @@
     "values": {
       "default": 48,
       "expanded": 48
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/doc/2xl",
+    "type": "dimension",
+    "description": "Espacio entre secciones en páginas de documentación.",
+    "alias": "spacing-primitives.space.scale.80",
+    "values": {
+      "compact": 80,
+      "expanded": 80,
+      "regular": 80
+    }
+  },
+  {
+    "collection": "spacing",
+    "name": "space/doc/sm",
+    "type": "dimension",
+    "description": "Espacio entre bloques en páginas de documentación.",
+    "alias": "spacing-primitives.space.scale.40",
+    "values": {
+      "compact": 40,
+      "expanded": 40,
+      "regular": 40
     }
   },
   {
