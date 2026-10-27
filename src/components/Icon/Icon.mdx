@@ -10,6 +10,12 @@ Contenedor por el que pasa todo icono del sistema. Fija el tamaño desde una sol
 <Canvas of={IconStories.Default} />
 <Controls of={IconStories.Default} />
 
+## Catálogo
+
+Los glifos salen del archivo KIA Icons (componentes `icon/<nombre>`, 24×24). El `name` es el nombre del componente sin el prefijo `icon/`.
+
+<Canvas of={IconStories.Catalog} />
+
 ## Matriz de variantes
 
 El único eje es `size`. El tamaño lo decide el token y no la instancia.
@@ -57,4 +63,4 @@ Sin `label` el icono es decorativo (`aria-hidden`). Con `label` se anuncia y deb
 
 ## Pendiente
 
-El catálogo completo de glifos vive en la página `_Iconos` de la librería KIA, que no es accesible desde «KIA Core Componentes». Hoy solo está el placeholder `image-01`.
+Los glifos de KIA Icons son de trazo y aquí van convertidos a contorno relleno, porque `Icon` pinta con `fill`. Si un icono cambia en Figma hay que volver a exportarlo. El placeholder `image-01` se conserva como default histórico de la propiedad `icon`.
